@@ -1,0 +1,87 @@
+02:41:54 HTTP Request: HEAD https://huggingface.co/roberta-base/resolve/main/config.json "HTTP/1.1 200 OK"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+02:41:54 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+02:41:54 HTTP Request: HEAD https://huggingface.co/roberta-base/resolve/main/tokenizer_config.json "HTTP/1.1 200 OK"
+02:41:54 HTTP Request: GET https://huggingface.co/api/models/roberta-base/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 307 Temporary Redirect"
+02:41:54 HTTP Request: GET https://huggingface.co/api/models/FacebookAI/roberta-base/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+02:41:54 HTTP Request: GET https://huggingface.co/api/models/roberta-base/tree/main?recursive=true&expand=false "HTTP/1.1 307 Temporary Redirect"
+02:41:54 HTTP Request: GET https://huggingface.co/api/models/FacebookAI/roberta-base/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+02:41:54 HTTP Request: HEAD https://huggingface.co/roberta-base/resolve/main/config.json "HTTP/1.1 200 OK"
+device : cuda:0 — NVIDIA GeForce RTX 5070 [sm_120] capped at 6.4 GB of 11.6 GB free
+encoder: roberta-base
+train  : 15 novels, 23,818 quotes
+dev    : 6 novels, 4,842 quotes
+
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|##########| 197/197 [00:00<00:00, 17240.34it/s]
+[transformers] [1mRobertaModel LOAD REPORT[0m from: roberta-base
+Key                       | Status     | 
+--------------------------+------------+-
+lm_head.dense.bias        | UNEXPECTED | 
+lm_head.layer_norm.weight | UNEXPECTED | 
+lm_head.layer_norm.bias   | UNEXPECTED | 
+lm_head.bias              | UNEXPECTED | 
+lm_head.dense.weight      | UNEXPECTED | 
+pooler.dense.bias         | MISSING    | 
+pooler.dense.weight       | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (526 > 512). Running this sequence through the model will result in indexing errors
+02:42:22 train: 23818 quotes encoded, gold in candidates for 91.4%
+02:42:27 dev: 4842 quotes encoded, gold in candidates for 86.1%
+02:43:00 epoch 1 step 200/2978 loss 2.0050
+02:43:32 epoch 1 step 400/2978 loss 1.4678
+02:44:00 epoch 1 step 600/2978 loss 1.4419
+02:44:34 epoch 1 step 800/2978 loss 1.2898
+02:45:03 epoch 1 step 1000/2978 loss 1.2464
+02:45:34 epoch 1 step 1200/2978 loss 1.2043
+02:46:09 epoch 1 step 1400/2978 loss 1.1654
+02:46:39 epoch 1 step 1600/2978 loss 1.0488
+02:47:02 epoch 1 step 1800/2978 loss 1.1254
+02:47:35 epoch 1 step 2000/2978 loss 1.0180
+02:48:08 epoch 1 step 2200/2978 loss 0.9586
+02:48:27 epoch 1 step 2400/2978 loss 0.8793
+02:48:44 epoch 1 step 2600/2978 loss 0.9243
+02:49:02 epoch 1 step 2800/2978 loss 0.9195
+02:49:29 epoch 1 dev accuracy 0.6636
+02:49:47 epoch 2 step 200/2978 loss 0.7918
+02:50:05 epoch 2 step 400/2978 loss 0.8216
+02:50:24 epoch 2 step 600/2978 loss 0.7391
+02:50:43 epoch 2 step 800/2978 loss 0.7651
+02:51:03 epoch 2 step 1000/2978 loss 0.7225
+02:51:23 epoch 2 step 1200/2978 loss 0.7459
+02:51:42 epoch 2 step 1400/2978 loss 0.7035
+02:52:06 epoch 2 step 1600/2978 loss 0.7387
+02:52:47 epoch 2 step 1800/2978 loss 0.6685
+02:53:23 epoch 2 step 2000/2978 loss 0.7072
+02:54:03 epoch 2 step 2200/2978 loss 0.7074
+02:54:47 epoch 2 step 2400/2978 loss 0.6582
+02:55:26 epoch 2 step 2600/2978 loss 0.6514
+02:55:59 epoch 2 step 2800/2978 loss 0.6620
+02:57:00 epoch 2 dev accuracy 0.6925
+02:57:35 epoch 3 step 200/2978 loss 0.5153
+02:58:13 epoch 3 step 400/2978 loss 0.5785
+02:58:55 epoch 3 step 600/2978 loss 0.5608
+02:59:34 epoch 3 step 800/2978 loss 0.5266
+03:00:06 epoch 3 step 1000/2978 loss 0.5058
+03:00:41 epoch 3 step 1200/2978 loss 0.5046
+03:01:19 epoch 3 step 1400/2978 loss 0.5205
+03:01:50 epoch 3 step 1600/2978 loss 0.5031
+03:02:32 epoch 3 step 1800/2978 loss 0.4901
+03:03:04 epoch 3 step 2000/2978 loss 0.4698
+03:03:39 epoch 3 step 2200/2978 loss 0.4987
+03:04:15 epoch 3 step 2400/2978 loss 0.4727
+03:04:49 epoch 3 step 2600/2978 loss 0.4980
+03:05:25 epoch 3 step 2800/2978 loss 0.4862
+03:06:19 epoch 3 dev accuracy 0.7204
+03:06:48 wrote C:\Users\extra\Desktop\DSC266\FP\outputs\results\ranker_dev.json
+
+ranker
+  all         72.0%  [60.6, 84.7]  n=4,842
+  explicit    94.2%  [90.4, 97.1]  n=1,722
+  anaphoric   64.7%  [57.0, 73.5]  n=1,750
+  implicit    53.6%  [42.3, 65.9]  n=1,370
+  ceiling     86.1%  (gold in candidate set)
+
+saved C:\Users\extra\Desktop\DSC266\FP\outputs\models\ranker.pt

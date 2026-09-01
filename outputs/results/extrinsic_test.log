@@ -1,0 +1,41 @@
+
+======================================================================
+2026-08-26 04:40:19  extrinsic.py test
+======================================================================
+extrinsic audio metric on test: 7 novels, 61.1 h of audio at 150 wpm, 39% of it dialogue
+
+system                  s/audio min           95% CI  s/dialogue min  h mis-voiced  length bias
+-----------------------------------------------------------------------------------------------
+random-candidate             18.50s   [12.40, 26.03]          47.10s        18.83h         1.01
+alternation                  14.55s    [9.86, 20.29]          37.06s        14.82h         0.97
+most-frequent                13.25s    [9.53, 17.66]          33.74s        13.49h         0.98
+nearest-mention              11.52s    [8.44, 16.01]          29.35s        11.73h         0.97
+nearest+speech-verb          11.27s    [8.44, 15.27]          28.70s        11.47h         0.96
+ranker                        4.57s     [2.61, 7.91]          11.64s         4.65h         1.10
+generator-zeroshot            4.55s     [2.05, 8.48]          11.58s         4.63h         0.85
+generator-lora                2.71s     [1.15, 5.78]           6.90s         2.76h         0.93
+
+paired bootstrap vs nearest-mention (negative = less mis-voiced audio):
+  random-candidate        +6.97s [+3.42, +11.72]*  p=1.000
+  alternation             +3.03s [+1.00, +5.93]*  p=1.000
+  most-frequent           +1.72s [+0.81, +2.79]*  p=1.000
+  nearest+speech-verb     -0.26s [-0.89, +0.10]   p=0.131
+  ranker                  -6.95s [-9.10, -5.55]*  p=0.000
+  generator-zeroshot      -6.98s [-9.83, -4.86]*  p=0.000
+  generator-lora          -8.82s [-11.70, -6.68]*  p=0.000
+
+* interval excludes zero
+
+share of mis-voiced audio by quote type (and duration-weighted error rate within type):
+system                               explicit              anaphoric               implicit
+-------------------------------------------------------------------------------------------
+random-candidate            30.9% ( 79.6%)      24.3% ( 76.1%)      44.8% ( 79.1%)
+alternation                 27.1% ( 54.9%)      26.5% ( 65.3%)      46.4% ( 64.5%)
+most-frequent               23.5% ( 43.4%)      27.3% ( 61.2%)      49.2% ( 62.2%)
+nearest-mention              3.3% (  5.3%)      34.2% ( 66.7%)      62.5% ( 68.8%)
+nearest+speech-verb          4.2% (  6.5%)      34.2% ( 65.2%)      61.6% ( 66.3%)
+ranker                       3.9% (  2.5%)      29.4% ( 22.7%)      66.7% ( 29.1%)
+generator-zeroshot          17.9% ( 11.3%)      23.9% ( 18.4%)      58.3% ( 25.3%)
+generator-lora               8.7% (  3.3%)      25.8% ( 11.8%)      65.5% ( 16.9%)
+
+wrote C:\Users\extra\Desktop\DSC266\FP\outputs\results\extrinsic_test.json

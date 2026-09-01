@@ -1,0 +1,144 @@
+run_all started 2026-08-25 09:15:38
+working directory: C:\Users\extra\Desktop\DSC266\FP\src
+state: C:\Users\extra\Desktop\DSC266\FP\outputs\results\run_all_state.json
+progress summary: C:\Users\extra\Desktop\DSC266\FP\outputs\results\run_all_progress.txt
+14 steps queued
+
+
+======================================================================
+[09:15:38] START  Ablation: ModernBERT with context clamped to 512  (attempt 1)
+          the ablation the advisor's context argument turns on
+          ranker.py --clamp --epochs 8 --tag _clamp
+          log: outputs/results/train_ranker_clamp.log
+[10:02:32] DONE   Ablation: ModernBERT with context clamped to 512 (47 min)
+
+======================================================================
+[10:02:32] START  Ablation: RoBERTa at the pre-swap window  (attempt 1)
+          with the clamp run, separates backbone from window
+          ranker.py --encoder roberta-base --clamp --epochs 8 --tag _legacy
+          log: outputs/results/train_ranker_legacy.log
+[10:35:38] DONE   Ablation: RoBERTa at the pre-swap window (33 min)
+
+======================================================================
+[10:35:38] START  Ablation: hand features zeroed  (attempt 1)
+          ranker.py --no-features --epochs 8 --tag _nofeat
+          log: outputs/results/train_ranker_nofeat.log
+[12:34:49] DONE   Ablation: hand features zeroed (119 min)
+
+======================================================================
+[12:34:49] START  Model 2: Qwen3-8B LoRA (8k quotes) + dev  (attempt 1)
+          generator.py dev --epochs 1 --limit-quotes 8000
+          log: outputs/results/generator_lora_dev.log
+[16:33:11] DONE   Model 2: Qwen3-8B LoRA (8k quotes) + dev (238 min)
+
+======================================================================
+[16:33:11] START  Ablation: Qwen3-1.7B zero-shot on dev  (attempt 1)
+          the documented size fallback, reported as a comparison
+          generator.py dev --zero-shot --model Qwen/Qwen3-1.7B --tag -1.7b
+          log: outputs/results/generator_zeroshot_small_dev.log
+[16:52:02] FAIL   Ablation: Qwen3-1.7B zero-shot on dev (19 min, exit 3221225477)
+          retrying; the step resumes from its own checkpoint
+
+======================================================================
+[16:52:02] START  Ablation: Qwen3-1.7B zero-shot on dev  (attempt 2)
+          generator.py dev --zero-shot --model Qwen/Qwen3-1.7B --tag -1.7b
+          log: outputs/results/generator_zeroshot_small_dev.log
+deferred (not queued): ranker-large-clean - ~7h, needs the GPU alone; run after the test split is scored
+run_all started 2026-08-26 01:24:21
+working directory: C:\Users\extra\Desktop\DSC266\FP\src
+state: C:\Users\extra\Desktop\DSC266\FP\outputs\results\run_all_state.json
+progress summary: C:\Users\extra\Desktop\DSC266\FP\outputs\results\run_all_progress.txt
+14 steps queued
+
+  (state file says pending, but ranker_clamp_dev.json exists - treating as done)
+[01:24:21] SKIP   Ablation: ModernBERT with context clamped to 512 (already done)
+  (state file says pending, but ranker_legacy_dev.json exists - treating as done)
+[01:24:21] SKIP   Ablation: RoBERTa at the pre-swap window (already done)
+  (state file says pending, but ranker_nofeat_dev.json exists - treating as done)
+[01:24:21] SKIP   Ablation: hand features zeroed (already done)
+  (state file says pending, but generator-lora_dev.json exists - treating as done)
+[01:24:21] SKIP   Model 2: Qwen3-8B LoRA (8k quotes) + dev (already done)
+  (state file says pending, but generator-zeroshot-1.7b_dev.json exists - treating as done)
+[01:24:21] SKIP   Ablation: Qwen3-1.7B zero-shot on dev (already done)
+
+======================================================================
+[01:24:21] START  Dev table: baselines + ranker + ablations + every decoder  (attempt 1)
+          compare.py dev --checkpoint ranker_mb.pt --include ranker_clamp_dev.json ranker_legacy_dev.json ranker_nofeat_dev.json ranker_large_dev.json generator-zeroshot_dev.json generator-lora_dev.json generator-zeroshot-1.7b_dev.json
+          log: outputs/results/compare_dev_all.log
+[01:25:44] DONE   Dev table: baselines + ranker + ablations + every decoder (1 min)
+
+======================================================================
+[01:25:44] START  TEST: baselines + ModernBERT ranker  (attempt 1)
+          compare.py test --checkpoint ranker_mb.pt
+          log: outputs/results/compare_test_ranker.log
+[01:27:36] DONE   TEST: baselines + ModernBERT ranker (2 min)
+
+======================================================================
+[01:27:36] START  TEST: Qwen3-8B zero-shot  (attempt 1)
+          generator.py test --zero-shot
+          log: outputs/results/generator_zeroshot_test.log
+[02:51:12] DONE   TEST: Qwen3-8B zero-shot (84 min)
+
+======================================================================
+[02:51:12] START  TEST: Qwen3-8B LoRA  (attempt 1)
+          generator.py test --adapter generator-lora.adapter
+          log: outputs/results/generator_lora_test.log
+[04:38:08] DONE   TEST: Qwen3-8B LoRA (107 min)
+
+======================================================================
+[04:38:08] START  TEST table: every system  (attempt 1)
+          compare.py test --checkpoint ranker_mb.pt --include generator-zeroshot_test.json generator-lora_test.json
+          log: outputs/results/compare_test_all.log
+[04:40:16] DONE   TEST table: every system (2 min)
+
+======================================================================
+[04:40:16] START  Extrinsic audiobook metric on dev  (attempt 1)
+          extrinsic.py dev
+          log: outputs/results/extrinsic_dev.log
+[04:40:19] DONE   Extrinsic audiobook metric on dev (0 min)
+
+======================================================================
+[04:40:19] START  Extrinsic audiobook metric on test  (attempt 1)
+          extrinsic.py test
+          log: outputs/results/extrinsic_test.log
+[04:40:23] DONE   Extrinsic audiobook metric on test (0 min)
+
+======================================================================
+[04:40:23] START  Rebuild report figures  (attempt 1)
+          figures.py dev --rebuild
+          log: outputs/results/figures.log
+[04:40:42] DONE   Rebuild report figures (0 min)
+[04:40:42] SKIP   Ablation: ModernBERT-large (capacity) (already done)
+
+======================================================================
+run_all finished 2026-08-26 04:40:42 (3.3 h)
+
+  done                 Ablation: ModernBERT with context clamped to 512
+  done                 Ablation: RoBERTa at the pre-swap window
+  done                 Ablation: hand features zeroed
+  done                 Model 2: Qwen3-8B LoRA (8k quotes) + dev
+  done                 Ablation: Qwen3-1.7B zero-shot on dev
+  done          1 min  Dev table: baselines + ranker + ablations + every decoder
+  done          2 min  TEST: baselines + ModernBERT ranker
+  done         84 min  TEST: Qwen3-8B zero-shot
+  done        107 min  TEST: Qwen3-8B LoRA
+  done          2 min  TEST table: every system
+  done                 Extrinsic audiobook metric on dev
+  done          0 min  Extrinsic audiobook metric on test
+  done          0 min  Rebuild report figures
+  done        318 min  Ablation: ModernBERT-large (capacity)
+  pending              PRIORITY-LATER: ModernBERT-large, effective batch matched to base
+
+  14 done, 1 pending
+run_all started 2026-08-26 04:41:18
+working directory: C:\Users\extra\Desktop\DSC266\FP\src
+state: C:\Users\extra\Desktop\DSC266\FP\outputs\results\run_all_state.json
+progress summary: C:\Users\extra\Desktop\DSC266\FP\outputs\results\run_all_progress.txt
+1 steps queued
+
+
+======================================================================
+[04:41:18] START  PRIORITY-LATER: ModernBERT-large, effective batch matched to base  (attempt 1)
+          ~7h, needs the GPU alone; run after the test split is scored
+          ranker.py --encoder answerdotai/ModernBERT-large --epochs 8 --batch-size 1 --grad-accum 8 --lr 2e-5 --memory-fraction 0.92 --tag _large_clean
+          log: outputs/results/train_ranker_large_clean.log

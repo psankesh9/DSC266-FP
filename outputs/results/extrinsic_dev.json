@@ -1,0 +1,571 @@
+{
+  "split": "dev",
+  "speaking_rate_wpm": 150.0,
+  "n_novels": 6,
+  "total_words": 312314,
+  "dialogue_words": 115337,
+  "audio_hours": 34.70155555555556,
+  "systems": {
+    "alternation": {
+      "sec_per_audio_minute": 14.71192453748471,
+      "sec_per_dialogue_minute": 39.83751961642838,
+      "ci": [
+        10.937573857631472,
+        20.91446329030912
+      ],
+      "misvoiced_words": 76579,
+      "misvoiced_hours": 8.508777777777777,
+      "duration_error_rate": 0.6639586602738063,
+      "quote_error_rate": 0.6284593143329202,
+      "length_bias": 1.0564863072776112,
+      "misvoiced_share_by_type": {
+        "explicit": 0.2273991564266966,
+        "anaphoric": 0.4018072839812481,
+        "implicit": 0.3707935595920553
+      },
+      "rate_by_type": {
+        "explicit": 0.5439155422288856,
+        "anaphoric": 0.6851785873341053,
+        "implicit": 0.7392028740270221
+      },
+      "per_novel": {
+        "TheAgeOfInnocence": [
+          16153,
+          23912,
+          101261
+        ],
+        "TheManWhoWasThursday": [
+          13689,
+          23169,
+          58057
+        ],
+        "TheGambler": [
+          16438,
+          23757,
+          61246
+        ],
+        "TheSignOfTheFour": [
+          20391,
+          26597,
+          43476
+        ],
+        "DaisyMiller": [
+          4998,
+          8715,
+          21834
+        ],
+        "AlicesAdventuresInWonderland": [
+          4910,
+          9187,
+          26440
+        ]
+      }
+    },
+    "most-frequent": {
+      "sec_per_audio_minute": 14.531721280506158,
+      "sec_per_dialogue_minute": 39.34955825103826,
+      "ci": [
+        10.666803419413242,
+        20.42388986966882
+      ],
+      "misvoiced_words": 75641,
+      "misvoiced_hours": 8.404555555555556,
+      "duration_error_rate": 0.6558259708506377,
+      "quote_error_rate": 0.6187525815778604,
+      "length_bias": 1.0599163387379131,
+      "misvoiced_share_by_type": {
+        "explicit": 0.2037122724448381,
+        "anaphoric": 0.4080062400021153,
+        "implicit": 0.38828148755304664
+      },
+      "rate_by_type": {
+        "explicit": 0.48129060469765117,
+        "anaphoric": 0.6872272200944153,
+        "implicit": 0.7645849061515633
+      },
+      "per_novel": {
+        "TheAgeOfInnocence": [
+          16550,
+          23912,
+          101261
+        ],
+        "TheManWhoWasThursday": [
+          12628,
+          23169,
+          58057
+        ],
+        "TheGambler": [
+          16965,
+          23757,
+          61246
+        ],
+        "TheSignOfTheFour": [
+          19766,
+          26597,
+          43476
+        ],
+        "DaisyMiller": [
+          5879,
+          8715,
+          21834
+        ],
+        "AlicesAdventuresInWonderland": [
+          3853,
+          9187,
+          26440
+        ]
+      }
+    },
+    "nearest+speech-verb": {
+      "sec_per_audio_minute": 12.64438994089282,
+      "sec_per_dialogue_minute": 34.23896928132343,
+      "ci": [
+        8.854311342592593,
+        18.104396472707734
+      ],
+      "misvoiced_words": 65817,
+      "misvoiced_hours": 7.313,
+      "duration_error_rate": 0.5706494880220571,
+      "quote_error_rate": 0.5125980999586948,
+      "length_bias": 1.11324932353054,
+      "misvoiced_share_by_type": {
+        "explicit": 0.058343589042344685,
+        "anaphoric": 0.48332497682969444,
+        "implicit": 0.45833143412796085
+      },
+      "rate_by_type": {
+        "explicit": 0.1199400299850075,
+        "anaphoric": 0.7083593123719605,
+        "implicit": 0.7853070575065733
+      },
+      "per_novel": {
+        "TheAgeOfInnocence": [
+          15943,
+          23912,
+          101261
+        ],
+        "TheManWhoWasThursday": [
+          10002,
+          23169,
+          58057
+        ],
+        "TheGambler": [
+          15744,
+          23757,
+          61246
+        ],
+        "TheSignOfTheFour": [
+          18007,
+          26597,
+          43476
+        ],
+        "DaisyMiller": [
+          4436,
+          8715,
+          21834
+        ],
+        "AlicesAdventuresInWonderland": [
+          1685,
+          9187,
+          26440
+        ]
+      }
+    },
+    "nearest-mention": {
+      "sec_per_audio_minute": 12.63267096575882,
+      "sec_per_dialogue_minute": 34.20723618613281,
+      "ci": [
+        8.531477852867864,
+        18.738801904045886
+      ],
+      "misvoiced_words": 65756,
+      "misvoiced_hours": 7.306222222222223,
+      "duration_error_rate": 0.5701206031022135,
+      "quote_error_rate": 0.5105328376703842,
+      "length_bias": 1.1167168123871025,
+      "misvoiced_share_by_type": {
+        "explicit": 0.05283168075917027,
+        "anaphoric": 0.4849747551554231,
+        "implicit": 0.4621935640854066
+      },
+      "rate_by_type": {
+        "explicit": 0.10850824587706147,
+        "anaphoric": 0.7101184644161397,
+        "implicit": 0.7911904823887747
+      },
+      "per_novel": {
+        "TheAgeOfInnocence": [
+          15152,
+          23912,
+          101261
+        ],
+        "TheManWhoWasThursday": [
+          9935,
+          23169,
+          58057
+        ],
+        "TheGambler": [
+          15255,
+          23757,
+          61246
+        ],
+        "TheSignOfTheFour": [
+          19297,
+          26597,
+          43476
+        ],
+        "DaisyMiller": [
+          4414,
+          8715,
+          21834
+        ],
+        "AlicesAdventuresInWonderland": [
+          1703,
+          9187,
+          26440
+        ]
+      }
+    },
+    "random-candidate": {
+      "sec_per_audio_minute": 18.20379489872372,
+      "sec_per_dialogue_minute": 49.292941553881235,
+      "ci": [
+        13.84956002635088,
+        24.93106686141831
+      ],
+      "misvoiced_words": 94755,
+      "misvoiced_hours": 10.528333333333334,
+      "duration_error_rate": 0.8215490258980206,
+      "quote_error_rate": 0.8004956629491945,
+      "length_bias": 1.0263004085134717,
+      "misvoiced_share_by_type": {
+        "explicit": 0.2553849401087014,
+        "anaphoric": 0.39346736319983117,
+        "implicit": 0.35114769669146745
+      },
+      "rate_by_type": {
+        "explicit": 0.7558408295852074,
+        "anaphoric": 0.8302084261156142,
+        "implicit": 0.8661911332101112
+      },
+      "per_novel": {
+        "TheAgeOfInnocence": [
+          19912,
+          23912,
+          101261
+        ],
+        "TheManWhoWasThursday": [
+          17761,
+          23169,
+          58057
+        ],
+        "TheGambler": [
+          20580,
+          23757,
+          61246
+        ],
+        "TheSignOfTheFour": [
+          23096,
+          26597,
+          43476
+        ],
+        "DaisyMiller": [
+          6705,
+          8715,
+          21834
+        ],
+        "AlicesAdventuresInWonderland": [
+          6701,
+          9187,
+          26440
+        ]
+      }
+    },
+    "generator-lora": {
+      "sec_per_audio_minute": 5.507726198633427,
+      "sec_per_dialogue_minute": 14.914034524913948,
+      "ci": [
+        1.5774357073842205,
+        11.108986823381166
+      ],
+      "misvoiced_words": 28669,
+      "misvoiced_hours": 3.1854444444444447,
+      "duration_error_rate": 0.24856724208189912,
+      "quote_error_rate": 0.17265592730276746,
+      "length_bias": 1.4396681652638224,
+      "misvoiced_share_by_type": {
+        "explicit": 0.05999511667654958,
+        "anaphoric": 0.3991768111897869,
+        "implicit": 0.5408280721336636
+      },
+      "rate_by_type": {
+        "explicit": 0.053723138430784606,
+        "anaphoric": 0.25483210118464417,
+        "implicit": 0.4036393929138573
+      },
+      "per_novel": {
+        "TheAgeOfInnocence": [
+          2876,
+          23912,
+          101261
+        ],
+        "TheManWhoWasThursday": [
+          2881,
+          23169,
+          58057
+        ],
+        "TheGambler": [
+          9662,
+          23757,
+          61246
+        ],
+        "TheSignOfTheFour": [
+          12836,
+          26597,
+          43476
+        ],
+        "DaisyMiller": [
+          332,
+          8715,
+          21834
+        ],
+        "AlicesAdventuresInWonderland": [
+          82,
+          9187,
+          26440
+        ]
+      }
+    },
+    "generator-zeroshot-1.7b": {
+      "sec_per_audio_minute": 13.817824369064468,
+      "sec_per_dialogue_minute": 37.41644051778701,
+      "ci": [
+        10.609907399082982,
+        19.031280653950954
+      ],
+      "misvoiced_words": 71925,
+      "misvoiced_hours": 7.991666666666666,
+      "duration_error_rate": 0.6236073419631167,
+      "quote_error_rate": 0.6484923585295332,
+      "length_bias": 0.9616263534348444,
+      "misvoiced_share_by_type": {
+        "explicit": 0.2359541188738269,
+        "anaphoric": 0.39726103580118177,
+        "implicit": 0.36678484532499134
+      },
+      "rate_by_type": {
+        "explicit": 0.5300787106446777,
+        "anaphoric": 0.6362563463080075,
+        "implicit": 0.6867727071564315
+      },
+      "per_novel": {
+        "TheAgeOfInnocence": [
+          15117,
+          23912,
+          101261
+        ],
+        "TheManWhoWasThursday": [
+          12975,
+          23169,
+          58057
+        ],
+        "TheGambler": [
+          14731,
+          23757,
+          61246
+        ],
+        "TheSignOfTheFour": [
+          17703,
+          26597,
+          43476
+        ],
+        "DaisyMiller": [
+          5619,
+          8715,
+          21834
+        ],
+        "AlicesAdventuresInWonderland": [
+          5780,
+          9187,
+          26440
+        ]
+      }
+    },
+    "generator-zeroshot": {
+      "sec_per_audio_minute": 7.063083947565591,
+      "sec_per_dialogue_minute": 19.125692535786435,
+      "ci": [
+        2.9265318565186464,
+        12.944805935453035
+      ],
+      "misvoiced_words": 36765,
+      "misvoiced_hours": 4.085,
+      "duration_error_rate": 0.31876154226310727,
+      "quote_error_rate": 0.25857083849648904,
+      "length_bias": 1.2327822584967776,
+      "misvoiced_share_by_type": {
+        "explicit": 0.11168230654154766,
+        "anaphoric": 0.4144158846729226,
+        "implicit": 0.47390180878552973
+      },
+      "rate_by_type": {
+        "explicit": 0.12824837581209395,
+        "anaphoric": 0.3392713993052463,
+        "implicit": 0.45357040585218544
+      },
+      "per_novel": {
+        "TheAgeOfInnocence": [
+          5306,
+          23912,
+          101261
+        ],
+        "TheManWhoWasThursday": [
+          5472,
+          23169,
+          58057
+        ],
+        "TheGambler": [
+          10831,
+          23757,
+          61246
+        ],
+        "TheSignOfTheFour": [
+          14305,
+          26597,
+          43476
+        ],
+        "DaisyMiller": [
+          486,
+          8715,
+          21834
+        ],
+        "AlicesAdventuresInWonderland": [
+          365,
+          9187,
+          26440
+        ]
+      }
+    },
+    "ranker": {
+      "sec_per_audio_minute": 6.370127499887933,
+      "sec_per_dialogue_minute": 17.249278202138083,
+      "ci": [
+        2.747292926451976,
+        11.299661809791713
+      ],
+      "misvoiced_words": 33158,
+      "misvoiced_hours": 3.6842222222222225,
+      "duration_error_rate": 0.2874879700356347,
+      "quote_error_rate": 0.21024370095002065,
+      "length_bias": 1.3674034881262704,
+      "misvoiced_share_by_type": {
+        "explicit": 0.05549188732734182,
+        "anaphoric": 0.3956209662826467,
+        "implicit": 0.5488871463900115
+      },
+      "rate_by_type": {
+        "explicit": 0.05747126436781609,
+        "anaphoric": 0.2921083103233277,
+        "implicit": 0.4737979329914352
+      },
+      "per_novel": {
+        "TheAgeOfInnocence": [
+          5688,
+          23912,
+          101261
+        ],
+        "TheManWhoWasThursday": [
+          3295,
+          23169,
+          58057
+        ],
+        "TheGambler": [
+          10587,
+          23757,
+          61246
+        ],
+        "TheSignOfTheFour": [
+          12418,
+          26597,
+          43476
+        ],
+        "DaisyMiller": [
+          829,
+          8715,
+          21834
+        ],
+        "AlicesAdventuresInWonderland": [
+          341,
+          9187,
+          26440
+        ]
+      }
+    }
+  },
+  "paired_vs_reference": {
+    "alternation": {
+      "delta": 2.079253571725891,
+      "ci": [
+        0.9548360787055241,
+        4.257460195051303
+      ],
+      "p": 1.0
+    },
+    "most-frequent": {
+      "delta": 1.8990503147473383,
+      "ci": [
+        1.112697756566833,
+        3.279046016764765
+      ],
+      "p": 1.0
+    },
+    "nearest+speech-verb": {
+      "delta": 0.011718975134000331,
+      "ci": [
+        -0.8383424519737943,
+        0.39253652091231395
+      ],
+      "p": 0.547
+    },
+    "random-candidate": {
+      "delta": 5.571123932964902,
+      "ci": [
+        3.960575910101838,
+        8.425245098039216
+      ],
+      "p": 1.0
+    },
+    "generator-lora": {
+      "delta": -7.124944767125393,
+      "ci": [
+        -8.491639746737306,
+        -5.873901319445874
+      ],
+      "p": 0.0
+    },
+    "generator-zeroshot-1.7b": {
+      "delta": 1.1851534033056481,
+      "ci": [
+        -0.5531982714809391,
+        4.341526919081726
+      ],
+      "p": 0.89
+    },
+    "generator-zeroshot": {
+      "delta": -5.5695870181932285,
+      "ci": [
+        -7.00152474479907,
+        -4.434466891643502
+      ],
+      "p": 0.0
+    },
+    "ranker": {
+      "delta": -6.262543465870887,
+      "ci": [
+        -8.035078730071142,
+        -4.973523095596963
+      ],
+      "p": 0.0
+    }
+  }
+}

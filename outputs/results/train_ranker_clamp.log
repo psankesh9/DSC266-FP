@@ -1,0 +1,172 @@
+
+======================================================================
+2026-08-25 09:15:38  ranker.py --clamp --epochs 8 --tag _clamp
+======================================================================
+W0825 09:15:43.287000 8848 torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+09:15:44 HTTP Request: HEAD https://huggingface.co/answerdotai/ModernBERT-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+09:15:44 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+09:15:44 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/answerdotai/ModernBERT-base/8949b909ec900327062f0ebf497f51aef5e6f0c8/config.json "HTTP/1.1 200 OK"
+09:15:44 HTTP Request: HEAD https://huggingface.co/answerdotai/ModernBERT-base/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+09:15:44 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/answerdotai/ModernBERT-base/8949b909ec900327062f0ebf497f51aef5e6f0c8/tokenizer_config.json "HTTP/1.1 200 OK"
+09:15:44 HTTP Request: HEAD https://huggingface.co/answerdotai/ModernBERT-base/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+09:15:44 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/answerdotai/ModernBERT-base/8949b909ec900327062f0ebf497f51aef5e6f0c8/tokenizer_config.json "HTTP/1.1 200 OK"
+09:15:44 HTTP Request: GET https://huggingface.co/api/models/answerdotai/ModernBERT-base/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+09:15:44 HTTP Request: GET https://huggingface.co/api/models/answerdotai/ModernBERT-base/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+09:15:44 HTTP Request: HEAD https://huggingface.co/answerdotai/ModernBERT-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+09:15:44 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/answerdotai/ModernBERT-base/8949b909ec900327062f0ebf497f51aef5e6f0c8/config.json "HTTP/1.1 200 OK"
+09:15:44 HTTP Request: HEAD https://huggingface.co/answerdotai/ModernBERT-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+09:15:44 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/answerdotai/ModernBERT-base/8949b909ec900327062f0ebf497f51aef5e6f0c8/config.json "HTTP/1.1 200 OK"
+device : cuda:0 — NVIDIA GeForce RTX 5070 [sm_120] capped at 9.6 GB of 11.6 GB free
+encoder: answerdotai/ModernBERT-base
+context: -900/+400 chars, 512 tokens  [CLAMPED]
+train  : 15 novels, 23,818 quotes
+dev    : 6 novels, 4,842 quotes
+
+features: on
+
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 5565.22it/s]
+[transformers] [1mModernBertModel LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     |  | 
+------------------+------------+--+-
+head.norm.weight  | UNEXPECTED |  | 
+decoder.bias      | UNEXPECTED |  | 
+head.dense.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+09:16:03 train: 23818 quotes encoded, gold in candidates for 91.4%, 33.8% of candidates out of window
+09:16:07 dev: 4842 quotes encoded, gold in candidates for 86.1%, 33.2% of candidates out of window
+09:16:29 epoch 1 step 200/2978 loss 3.3475
+09:16:51 epoch 1 step 400/2978 loss 1.7571
+09:17:13 epoch 1 step 600/2978 loss 1.4962
+09:17:35 epoch 1 step 800/2978 loss 1.4065
+09:17:57 epoch 1 step 1000/2978 loss 1.3138
+09:18:19 epoch 1 step 1200/2978 loss 1.3452
+09:18:41 epoch 1 step 1400/2978 loss 1.2239
+09:19:03 epoch 1 step 1600/2978 loss 1.2960
+09:19:25 epoch 1 step 1800/2978 loss 1.1565
+09:19:47 epoch 1 step 2000/2978 loss 1.1154
+09:20:09 epoch 1 step 2200/2978 loss 1.1757
+09:20:31 epoch 1 step 2400/2978 loss 1.1241
+09:20:53 epoch 1 step 2600/2978 loss 1.0978
+09:21:15 epoch 1 step 2800/2978 loss 1.0342
+09:21:52 epoch 1 dev accuracy 0.6047
+09:21:53 epoch 1 checkpointed to C:\Users\extra\Desktop\DSC266\FP\outputs\models\ranker_clamp.partial.pt
+09:22:16 epoch 2 step 200/2978 loss 0.9820
+09:22:38 epoch 2 step 400/2978 loss 0.9366
+09:23:00 epoch 2 step 600/2978 loss 0.9855
+09:23:22 epoch 2 step 800/2978 loss 0.9361
+09:23:44 epoch 2 step 1000/2978 loss 0.9354
+09:24:06 epoch 2 step 1200/2978 loss 0.7777
+09:24:28 epoch 2 step 1400/2978 loss 0.8259
+09:24:50 epoch 2 step 1600/2978 loss 0.6797
+09:25:11 epoch 2 step 1800/2978 loss 0.6708
+09:25:33 epoch 2 step 2000/2978 loss 0.6466
+09:25:55 epoch 2 step 2200/2978 loss 0.6125
+09:26:17 epoch 2 step 2400/2978 loss 0.5692
+09:26:39 epoch 2 step 2600/2978 loss 0.5896
+09:27:01 epoch 2 step 2800/2978 loss 0.5740
+09:27:38 epoch 2 dev accuracy 0.7491
+09:27:39 epoch 2 checkpointed to C:\Users\extra\Desktop\DSC266\FP\outputs\models\ranker_clamp.partial.pt
+09:28:02 epoch 3 step 200/2978 loss 0.4203
+09:28:24 epoch 3 step 400/2978 loss 0.4525
+09:28:46 epoch 3 step 600/2978 loss 0.4184
+09:29:08 epoch 3 step 800/2978 loss 0.3989
+09:29:30 epoch 3 step 1000/2978 loss 0.4509
+09:29:52 epoch 3 step 1200/2978 loss 0.4121
+09:30:14 epoch 3 step 1400/2978 loss 0.4263
+09:30:36 epoch 3 step 1600/2978 loss 0.4217
+09:30:58 epoch 3 step 1800/2978 loss 0.3524
+09:31:20 epoch 3 step 2000/2978 loss 0.4403
+09:31:42 epoch 3 step 2200/2978 loss 0.3493
+09:32:04 epoch 3 step 2400/2978 loss 0.3890
+09:32:26 epoch 3 step 2600/2978 loss 0.3698
+09:32:47 epoch 3 step 2800/2978 loss 0.3955
+09:33:25 epoch 3 dev accuracy 0.7571
+09:33:25 epoch 3 checkpointed to C:\Users\extra\Desktop\DSC266\FP\outputs\models\ranker_clamp.partial.pt
+09:33:48 epoch 4 step 200/2978 loss 0.2110
+09:34:10 epoch 4 step 400/2978 loss 0.2103
+09:34:32 epoch 4 step 600/2978 loss 0.2455
+09:34:54 epoch 4 step 800/2978 loss 0.2971
+09:35:16 epoch 4 step 1000/2978 loss 0.2338
+09:35:37 epoch 4 step 1200/2978 loss 0.2679
+09:35:59 epoch 4 step 1400/2978 loss 0.2191
+09:36:21 epoch 4 step 1600/2978 loss 0.2346
+09:36:43 epoch 4 step 1800/2978 loss 0.2608
+09:37:05 epoch 4 step 2000/2978 loss 0.2477
+09:37:27 epoch 4 step 2200/2978 loss 0.2182
+09:37:49 epoch 4 step 2400/2978 loss 0.2877
+09:38:11 epoch 4 step 2600/2978 loss 0.2204
+09:38:32 epoch 4 step 2800/2978 loss 0.2577
+09:39:09 epoch 4 dev accuracy 0.7505
+09:39:33 epoch 5 step 200/2978 loss 0.1864
+09:39:54 epoch 5 step 400/2978 loss 0.1407
+09:40:16 epoch 5 step 600/2978 loss 0.1651
+09:40:38 epoch 5 step 800/2978 loss 0.1783
+09:41:00 epoch 5 step 1000/2978 loss 0.1989
+09:41:22 epoch 5 step 1200/2978 loss 0.1774
+09:41:44 epoch 5 step 1400/2978 loss 0.1654
+09:42:06 epoch 5 step 1600/2978 loss 0.1672
+09:42:28 epoch 5 step 1800/2978 loss 0.1694
+09:42:50 epoch 5 step 2000/2978 loss 0.1485
+09:43:12 epoch 5 step 2200/2978 loss 0.1876
+09:43:33 epoch 5 step 2400/2978 loss 0.1683
+09:43:55 epoch 5 step 2600/2978 loss 0.1544
+09:44:17 epoch 5 step 2800/2978 loss 0.1500
+09:44:54 epoch 5 dev accuracy 0.7451
+09:45:17 epoch 6 step 200/2978 loss 0.1218
+09:45:39 epoch 6 step 400/2978 loss 0.1143
+09:46:01 epoch 6 step 600/2978 loss 0.0950
+09:46:23 epoch 6 step 800/2978 loss 0.1376
+09:46:45 epoch 6 step 1000/2978 loss 0.1391
+09:47:07 epoch 6 step 1200/2978 loss 0.1201
+09:47:28 epoch 6 step 1400/2978 loss 0.1370
+09:47:50 epoch 6 step 1600/2978 loss 0.1244
+09:48:12 epoch 6 step 1800/2978 loss 0.1362
+09:48:34 epoch 6 step 2000/2978 loss 0.1282
+09:48:56 epoch 6 step 2200/2978 loss 0.1137
+09:49:18 epoch 6 step 2400/2978 loss 0.1200
+09:49:39 epoch 6 step 2600/2978 loss 0.1393
+09:50:01 epoch 6 step 2800/2978 loss 0.1152
+09:50:38 epoch 6 dev accuracy 0.7482
+09:51:01 epoch 7 step 200/2978 loss 0.1011
+09:51:23 epoch 7 step 400/2978 loss 0.1325
+09:51:45 epoch 7 step 600/2978 loss 0.0852
+09:52:07 epoch 7 step 800/2978 loss 0.1007
+09:52:29 epoch 7 step 1000/2978 loss 0.0820
+09:52:51 epoch 7 step 1200/2978 loss 0.1398
+09:53:12 epoch 7 step 1400/2978 loss 0.1026
+09:53:34 epoch 7 step 1600/2978 loss 0.1192
+09:53:56 epoch 7 step 1800/2978 loss 0.1070
+09:54:18 epoch 7 step 2000/2978 loss 0.1150
+09:54:40 epoch 7 step 2200/2978 loss 0.1008
+09:55:02 epoch 7 step 2400/2978 loss 0.1088
+09:55:24 epoch 7 step 2600/2978 loss 0.1169
+09:55:46 epoch 7 step 2800/2978 loss 0.1327
+09:56:23 epoch 7 dev accuracy 0.7542
+09:56:46 epoch 8 step 200/2978 loss 0.0815
+09:57:08 epoch 8 step 400/2978 loss 0.1145
+09:57:30 epoch 8 step 600/2978 loss 0.0957
+09:57:52 epoch 8 step 800/2978 loss 0.0929
+09:58:14 epoch 8 step 1000/2978 loss 0.0990
+09:58:35 epoch 8 step 1200/2978 loss 0.0830
+09:58:57 epoch 8 step 1400/2978 loss 0.1208
+09:59:19 epoch 8 step 1600/2978 loss 0.0943
+09:59:41 epoch 8 step 1800/2978 loss 0.0907
+10:00:03 epoch 8 step 2000/2978 loss 0.0987
+10:00:25 epoch 8 step 2200/2978 loss 0.1148
+10:00:47 epoch 8 step 2400/2978 loss 0.0896
+10:01:08 epoch 8 step 2600/2978 loss 0.1149
+10:01:30 epoch 8 step 2800/2978 loss 0.0899
+10:02:08 epoch 8 dev accuracy 0.7487
+10:02:30 wrote C:\Users\extra\Desktop\DSC266\FP\outputs\results\ranker_clamp_dev.json
+
+ranker_clamp
+  all         75.7%  [64.3, 87.2]  n=4,842
+  explicit    94.4%  [90.6, 97.6]  n=1,722
+  anaphoric   69.4%  [58.8, 79.5]  n=1,750
+  implicit    60.4%  [47.5, 74.2]  n=1,370
+  ceiling     86.1%  (gold in candidate set)
+
+saved C:\Users\extra\Desktop\DSC266\FP\outputs\models\ranker_clamp.pt (best dev accuracy 0.7571)

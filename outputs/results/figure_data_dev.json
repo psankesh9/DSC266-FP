@@ -1,0 +1,425 @@
+{
+  "split": "dev",
+  "n_novels": 6,
+  "baselines": {
+    "random-candidate": {
+      "accuracy": {
+        "all": 0.20549359768690623,
+        "explicit": 0.218931475029036,
+        "anaphoric": 0.2,
+        "implicit": 0.19562043795620437
+      },
+      "ci": {
+        "all": [
+          0.18317422434367542,
+          0.23333333333333334
+        ],
+        "explicit": [
+          0.17779339423752635,
+          0.25925925925925924
+        ],
+        "anaphoric": [
+          0.17989179440937783,
+          0.23593466424682397
+        ],
+        "implicit": [
+          0.15963855421686746,
+          0.24089935760171305
+        ]
+      },
+      "counts": {
+        "all": 4842,
+        "explicit": 1722,
+        "anaphoric": 1750,
+        "implicit": 1370
+      },
+      "per_novel": {
+        "TheAgeOfInnocence": 0.18808327351040918,
+        "TheManWhoWasThursday": 0.22236180904522612,
+        "TheGambler": 0.15796344647519583,
+        "TheSignOfTheFour": 0.203125,
+        "DaisyMiller": 0.25272727272727274,
+        "AlicesAdventuresInWonderland": 0.2381635581061693
+      },
+      "coverage": 0.8605947955390335
+    },
+    "most-frequent": {
+      "accuracy": {
+        "all": 0.3812474184221396,
+        "explicit": 0.4843205574912892,
+        "anaphoric": 0.33485714285714285,
+        "implicit": 0.310948905109489
+      },
+      "ci": {
+        "all": [
+          0.3319209039548023,
+          0.44325481798715205
+        ],
+        "explicit": [
+          0.44478293983244477,
+          0.5143288084464555
+        ],
+        "anaphoric": [
+          0.2869458128078818,
+          0.39655172413793105
+        ],
+        "implicit": [
+          0.26813880126182965,
+          0.36633663366336633
+        ]
+      },
+      "counts": {
+        "all": 4842,
+        "explicit": 1722,
+        "anaphoric": 1750,
+        "implicit": 1370
+      },
+      "per_novel": {
+        "TheAgeOfInnocence": 0.35247666905958364,
+        "TheManWhoWasThursday": 0.4472361809045226,
+        "TheGambler": 0.3198433420365535,
+        "TheSignOfTheFour": 0.29375,
+        "DaisyMiller": 0.39636363636363636,
+        "AlicesAdventuresInWonderland": 0.49928263988522237
+      },
+      "coverage": 0.8605947955390335
+    },
+    "nearest-mention": {
+      "accuracy": {
+        "all": 0.48946716232961585,
+        "explicit": 0.8739837398373984,
+        "anaphoric": 0.2862857142857143,
+        "implicit": 0.2656934306569343
+      },
+      "ci": {
+        "all": [
+          0.379041248606466,
+          0.6526857983811626
+        ],
+        "explicit": [
+          0.8430141287284144,
+          0.916030534351145
+        ],
+        "anaphoric": [
+          0.253448275862069,
+          0.33361921097770153
+        ],
+        "implicit": [
+          0.21344717182497333,
+          0.3022794846382557
+        ]
+      },
+      "counts": {
+        "all": 4842,
+        "explicit": 1722,
+        "anaphoric": 1750,
+        "implicit": 1370
+      },
+      "per_novel": {
+        "TheAgeOfInnocence": 0.3639626704953338,
+        "TheManWhoWasThursday": 0.635678391959799,
+        "TheGambler": 0.3838120104438642,
+        "TheSignOfTheFour": 0.3359375,
+        "DaisyMiller": 0.5490909090909091,
+        "AlicesAdventuresInWonderland": 0.7833572453371592
+      },
+      "coverage": 0.8605947955390335
+    },
+    "nearest+speech-verb": {
+      "accuracy": {
+        "all": 0.48740190004130524,
+        "explicit": 0.8635307781649245,
+        "anaphoric": 0.2948571428571429,
+        "implicit": 0.2605839416058394
+      },
+      "ci": {
+        "all": [
+          0.38108206245461146,
+          0.6541574687270052
+        ],
+        "explicit": [
+          0.8158730158730159,
+          0.906832298136646
+        ],
+        "anaphoric": [
+          0.2652582159624413,
+          0.3356562137049942
+        ],
+        "implicit": [
+          0.22741935483870968,
+          0.28402366863905326
+        ]
+      },
+      "counts": {
+        "all": 4842,
+        "explicit": 1722,
+        "anaphoric": 1750,
+        "implicit": 1370
+      },
+      "per_novel": {
+        "TheAgeOfInnocence": 0.3582196697774587,
+        "TheManWhoWasThursday": 0.628140703517588,
+        "TheGambler": 0.3733681462140992,
+        "TheSignOfTheFour": 0.35625,
+        "DaisyMiller": 0.5472727272727272,
+        "AlicesAdventuresInWonderland": 0.7833572453371592
+      },
+      "coverage": 0.8605947955390335
+    },
+    "alternation": {
+      "accuracy": {
+        "all": 0.3715406856670797,
+        "explicit": 0.429732868757259,
+        "anaphoric": 0.3325714285714286,
+        "implicit": 0.34817518248175183
+      },
+      "ci": {
+        "all": [
+          0.3241206030150754,
+          0.41830065359477125
+        ],
+        "explicit": [
+          0.3954695611137329,
+          0.47425670775924583
+        ],
+        "anaphoric": [
+          0.29405940594059404,
+          0.38461538461538464
+        ],
+        "implicit": [
+          0.2608695652173913,
+          0.4396551724137931
+        ]
+      },
+      "counts": {
+        "all": 4842,
+        "explicit": 1722,
+        "anaphoric": 1750,
+        "implicit": 1370
+      },
+      "per_novel": {
+        "TheAgeOfInnocence": 0.3646805455850682,
+        "TheManWhoWasThursday": 0.4108040201005025,
+        "TheGambler": 0.3289817232375979,
+        "TheSignOfTheFour": 0.2640625,
+        "DaisyMiller": 0.4763636363636364,
+        "AlicesAdventuresInWonderland": 0.4031563845050215
+      },
+      "coverage": 0.8605947955390335
+    }
+  },
+  "sweep": [
+    {
+      "before": 500,
+      "after": 200,
+      "recall": {
+        "all": 0.7023957042544403,
+        "explicit": 0.9506387921022067,
+        "person3": 0.7726957726957727,
+        "TheAgeOfInnocence": 0.6223977027997128,
+        "anaphoric": 0.6102857142857143,
+        "implicit": 0.5080291970802919,
+        "TheManWhoWasThursday": 0.8517587939698492,
+        "person1": 0.5986707566462167,
+        "TheGambler": 0.5143603133159269,
+        "TheSignOfTheFour": 0.415625,
+        "DaisyMiller": 0.9290909090909091,
+        "AlicesAdventuresInWonderland": 0.9827833572453372
+      },
+      "mean_candidates": {
+        "all": 2.520446096654275,
+        "explicit": 3.0580720092915215,
+        "person3": 2.7113652113652114,
+        "TheAgeOfInnocence": 2.5570710696338836,
+        "anaphoric": 2.2937142857142856,
+        "implicit": 2.1343065693430656,
+        "TheManWhoWasThursday": 2.6670854271356785,
+        "person1": 2.238752556237219,
+        "TheGambler": 2.2075718015665795,
+        "TheSignOfTheFour": 1.6453125,
+        "DaisyMiller": 2.9727272727272727,
+        "AlicesAdventuresInWonderland": 3.0703012912482066
+      }
+    },
+    {
+      "before": 900,
+      "after": 400,
+      "recall": {
+        "all": 0.7798430400660884,
+        "explicit": 0.9541231126596981,
+        "person3": 0.8516978516978517,
+        "TheAgeOfInnocence": 0.7623833452979182,
+        "anaphoric": 0.72,
+        "implicit": 0.6372262773722628,
+        "TheManWhoWasThursday": 0.8869346733668342,
+        "person1": 0.6738241308793456,
+        "TheGambler": 0.6031331592689295,
+        "TheSignOfTheFour": 0.515625,
+        "DaisyMiller": 0.9563636363636364,
+        "AlicesAdventuresInWonderland": 0.9899569583931134
+      },
+      "mean_candidates": {
+        "all": 3.3841387856257743,
+        "explicit": 3.8176538908246225,
+        "person3": 3.6216216216216215,
+        "TheAgeOfInnocence": 3.7537688442211055,
+        "anaphoric": 3.184,
+        "implicit": 3.0948905109489053,
+        "TheManWhoWasThursday": 3.2939698492462313,
+        "person1": 3.0337423312883436,
+        "TheGambler": 3.199738903394256,
+        "TheSignOfTheFour": 2.4609375,
+        "DaisyMiller": 3.4690909090909092,
+        "AlicesAdventuresInWonderland": 3.731707317073171
+      }
+    },
+    {
+      "before": 1500,
+      "after": 600,
+      "recall": {
+        "all": 0.8252788104089219,
+        "explicit": 0.9552845528455285,
+        "person3": 0.8988218988218988,
+        "TheAgeOfInnocence": 0.8499641062455133,
+        "anaphoric": 0.7817142857142857,
+        "implicit": 0.7175182481751825,
+        "TheManWhoWasThursday": 0.9032663316582915,
+        "person1": 0.7167689161554193,
+        "TheGambler": 0.643603133159269,
+        "TheSignOfTheFour": 0.59375,
+        "DaisyMiller": 0.9618181818181818,
+        "AlicesAdventuresInWonderland": 0.9913916786226685
+      },
+      "mean_candidates": {
+        "all": 4.150764147046675,
+        "explicit": 4.440185830429733,
+        "person3": 4.433125433125433,
+        "TheAgeOfInnocence": 4.819095477386934,
+        "anaphoric": 4.014857142857143,
+        "implicit": 3.9605839416058393,
+        "TheManWhoWasThursday": 3.8467336683417086,
+        "person1": 3.7341513292433537,
+        "TheGambler": 4.067885117493472,
+        "TheSignOfTheFour": 3.2984375,
+        "DaisyMiller": 3.7763636363636364,
+        "AlicesAdventuresInWonderland": 4.331420373027259
+      }
+    },
+    {
+      "before": 2500,
+      "after": 800,
+      "recall": {
+        "all": 0.8605947955390335,
+        "explicit": 0.9576074332171893,
+        "person3": 0.9338184338184338,
+        "TheAgeOfInnocence": 0.9167264895908112,
+        "anaphoric": 0.8297142857142857,
+        "implicit": 0.7781021897810219,
+        "TheManWhoWasThursday": 0.9133165829145728,
+        "person1": 0.7525562372188139,
+        "TheGambler": 0.6710182767624021,
+        "TheSignOfTheFour": 0.66875,
+        "DaisyMiller": 0.9636363636363636,
+        "AlicesAdventuresInWonderland": 0.9913916786226685
+      },
+      "mean_candidates": {
+        "all": 5.029946303180504,
+        "explicit": 5.199767711962834,
+        "person3": 5.369715869715869,
+        "TheAgeOfInnocence": 6.04737975592247,
+        "anaphoric": 4.953714285714286,
+        "implicit": 4.913868613138686,
+        "TheManWhoWasThursday": 4.434673366834171,
+        "person1": 4.528629856850716,
+        "TheGambler": 4.989556135770235,
+        "TheSignOfTheFour": 4.3484375,
+        "DaisyMiller": 4.096363636363637,
+        "AlicesAdventuresInWonderland": 5.0832137733142035
+      }
+    },
+    {
+      "before": 4000,
+      "after": 1500,
+      "recall": {
+        "all": 0.8843453118546055,
+        "explicit": 0.9605110336817654,
+        "person3": 0.9525294525294525,
+        "TheAgeOfInnocence": 0.9533381191672649,
+        "anaphoric": 0.8668571428571429,
+        "implicit": 0.810948905109489,
+        "TheManWhoWasThursday": 0.9170854271356784,
+        "person1": 0.7837423312883436,
+        "TheGambler": 0.6945169712793734,
+        "TheSignOfTheFour": 0.7296875,
+        "DaisyMiller": 0.9709090909090909,
+        "AlicesAdventuresInWonderland": 0.9913916786226685
+      },
+      "mean_candidates": {
+        "all": 6.27819083023544,
+        "explicit": 6.316492450638792,
+        "person3": 6.7331947331947335,
+        "TheAgeOfInnocence": 7.820531227566404,
+        "anaphoric": 6.250285714285714,
+        "implicit": 6.265693430656935,
+        "TheManWhoWasThursday": 5.164572864321608,
+        "person1": 5.606850715746421,
+        "TheGambler": 6.206266318537859,
+        "TheSignOfTheFour": 5.775,
+        "DaisyMiller": 4.576363636363636,
+        "AlicesAdventuresInWonderland": 6.351506456241033
+      }
+    }
+  ],
+  "ablation": {
+    "PDNC aliases only": {
+      "recall": {
+        "all": 0.7825278810408922,
+        "explicit": 0.8368176538908246,
+        "person3": 0.8066528066528067,
+        "TheAgeOfInnocence": 0.8155061019382628,
+        "anaphoric": 0.7657142857142857,
+        "implicit": 0.7357664233576642,
+        "TheManWhoWasThursday": 0.8630653266331658,
+        "person1": 0.7469325153374233,
+        "TheGambler": 0.6579634464751958,
+        "TheSignOfTheFour": 0.6671875,
+        "DaisyMiller": 0.9636363636363636,
+        "AlicesAdventuresInWonderland": 0.7245337159253945
+      },
+      "mean_candidates": 4.24907063197026
+    },
+    "+ derived names": {
+      "recall": {
+        "all": 0.8605947955390335,
+        "explicit": 0.9576074332171893,
+        "person3": 0.9338184338184338,
+        "TheAgeOfInnocence": 0.9167264895908112,
+        "anaphoric": 0.8297142857142857,
+        "implicit": 0.7781021897810219,
+        "TheManWhoWasThursday": 0.9133165829145728,
+        "person1": 0.7525562372188139,
+        "TheGambler": 0.6710182767624021,
+        "TheSignOfTheFour": 0.66875,
+        "DaisyMiller": 0.9636363636363636,
+        "AlicesAdventuresInWonderland": 0.9913916786226685
+      },
+      "mean_candidates": 5.029946303180504
+    }
+  },
+  "per_novel_ceiling": {
+    "TheAgeOfInnocence": 0.9167264895908112,
+    "TheManWhoWasThursday": 0.9133165829145728,
+    "TheGambler": 0.6710182767624021,
+    "TheSignOfTheFour": 0.66875,
+    "DaisyMiller": 0.9636363636363636,
+    "AlicesAdventuresInWonderland": 0.9913916786226685
+  },
+  "novel_person": {
+    "TheAgeOfInnocence": 3,
+    "TheManWhoWasThursday": 3,
+    "TheGambler": 1,
+    "TheSignOfTheFour": 1,
+    "DaisyMiller": 1,
+    "AlicesAdventuresInWonderland": 3
+  }
+}

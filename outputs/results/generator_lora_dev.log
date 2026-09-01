@@ -1,0 +1,219 @@
+C:\Users\extra\Desktop\DSC266\FP\src\device.py:48: UserWarning: expandable_segments not supported on this platform (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\c10/cuda/CUDAAllocatorConfig.h:40.)
+  a = torch.randn(64, 64, device=f"cuda:{index}")
+device : cuda:0 - NVIDIA GeForce RTX 5070 [sm_120] capped at 11.8 GB of 11.6 GB free
+model  : Qwen/Qwen3-8B  [4-bit NF4]
+context: -2500/+800 chars
+dev    : 6 novels, 4,842 quotes
+
+22:05:19 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+22:05:19 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+22:05:19 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+22:05:19 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+22:05:19 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/tokenizer_config.json "HTTP/1.1 200 OK"
+22:05:19 HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3-8B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+22:05:19 HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3-8B/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+22:05:20 HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3-8B "HTTP/1.1 200 OK"
+22:05:20 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+22:05:20 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+22:05:20 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+22:05:20 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+W0814 22:05:20.604000 37572 torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   0%|          | 1/399 [00:00<02:01,  3.27it/s]Loading weights:   1%|          | 2/399 [00:00<01:59,  3.33it/s]Loading weights:   2%|▏         | 6/399 [00:00<00:35, 11.20it/s]Loading weights:   4%|▍         | 17/399 [00:00<00:11, 34.41it/s]Loading weights:   7%|▋         | 28/399 [00:00<00:06, 53.19it/s]Loading weights:  11%|█         | 43/399 [00:01<00:04, 77.39it/s]Loading weights:  14%|█▍        | 56/399 [00:01<00:03, 90.87it/s]Loading weights:  17%|█▋        | 68/399 [00:01<00:03, 98.52it/s]Loading weights:  20%|██        | 80/399 [00:01<00:03, 103.86it/s]Loading weights:  23%|██▎       | 92/399 [00:01<00:03, 100.06it/s]Loading weights:  26%|██▌       | 103/399 [00:01<00:02, 102.45it/s]Loading weights:  29%|██▊       | 114/399 [00:01<00:02, 104.04it/s]Loading weights:  31%|███▏      | 125/399 [00:01<00:02, 105.36it/s]Loading weights:  34%|███▍      | 136/399 [00:01<00:02, 106.35it/s]Loading weights:  37%|███▋      | 147/399 [00:01<00:02, 106.79it/s]Loading weights:  40%|███▉      | 158/399 [00:02<00:02, 107.44it/s]Loading weights:  42%|████▏     | 169/399 [00:02<00:02, 107.59it/s]Loading weights:  45%|████▌     | 180/399 [00:02<00:02, 106.70it/s]Loading weights:  48%|████▊     | 191/399 [00:02<00:01, 104.90it/s]Loading weights:  51%|█████     | 202/399 [00:02<00:01, 105.60it/s]Loading weights:  53%|█████▎    | 213/399 [00:02<00:01, 106.03it/s]Loading weights:  56%|█████▌    | 224/399 [00:02<00:01, 106.20it/s]Loading weights:  59%|█████▉    | 235/399 [00:02<00:01, 106.48it/s]Loading weights:  62%|██████▏   | 246/399 [00:02<00:01, 106.73it/s]Loading weights:  64%|██████▍   | 257/399 [00:02<00:01, 105.69it/s]Loading weights:  67%|██████▋   | 268/399 [00:03<00:01, 106.18it/s]Loading weights:  70%|██████▉   | 279/399 [00:03<00:01, 106.54it/s]Loading weights:  73%|███████▎  | 290/399 [00:03<00:01, 106.57it/s]Loading weights:  75%|███████▌  | 301/399 [00:03<00:00, 106.53it/s]Loading weights:  78%|███████▊  | 312/399 [00:03<00:00, 106.45it/s]Loading weights:  81%|████████  | 323/399 [00:03<00:00, 106.76it/s]Loading weights:  84%|████████▎ | 334/399 [00:03<00:00, 107.27it/s]Loading weights:  86%|████████▋ | 345/399 [00:03<00:00, 107.84it/s]Loading weights:  89%|████████▉ | 356/399 [00:03<00:00, 107.62it/s]Loading weights:  92%|█████████▏| 367/399 [00:04<00:00, 107.84it/s]Loading weights:  95%|█████████▍| 378/399 [00:04<00:00, 108.00it/s]Loading weights:  97%|█████████▋| 389/399 [00:04<00:00, 107.54it/s]Loading weights: 100%|██████████| 399/399 [00:04<00:00, 92.80it/s] 
+22:05:27 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+22:05:27 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/generation_config.json "HTTP/1.1 200 OK"
+22:05:27 LoRA: 43.6M trainable of 4761.5M (0.917%)
+22:05:35 train: 23818 prompts built, gold in candidates for 91.4%
+train  : capped to 8,000 quotes
+
+22:05:37 dev: 4842 prompts built, gold in candidates for 86.1%
+22:05:37 training on 7337 of 8000 quotes (gold reachable)
+22:15:29 epoch 1 400/7337 loss 0.4226
+22:25:21 epoch 1 800/7337 loss 0.1539
+22:35:10 epoch 1 1200/7337 loss 0.1243
+22:45:03 epoch 1 1600/7337 loss 0.1294
+22:54:55 epoch 1 2000/7337 loss 0.0869
+23:04:47 epoch 1 2400/7337 loss 0.1063
+23:14:37 epoch 1 2800/7337 loss 0.1275
+23:24:30 epoch 1 3200/7337 loss 0.0751
+23:34:25 epoch 1 3600/7337 loss 0.0791
+23:44:22 epoch 1 4000/7337 loss 0.0469
+23:54:15 epoch 1 4400/7337 loss 0.0803
+00:04:07 epoch 1 4800/7337 loss 0.0862
+00:13:55 epoch 1 5200/7337 loss 0.0623
+00:23:45 epoch 1 5600/7337 loss 0.0546
+
+======================================================================
+2026-08-25 12:34:49  generator.py dev --epochs 1 --limit-quotes 8000
+======================================================================
+12:34:54 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+12:34:54 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+12:34:54 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+12:34:54 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+12:34:54 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/tokenizer_config.json "HTTP/1.1 200 OK"
+12:34:54 HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3-8B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+12:34:54 HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3-8B/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+12:34:54 HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3-8B "HTTP/1.1 200 OK"
+12:34:54 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+12:34:54 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+12:34:55 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+12:34:55 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+W0825 12:34:55.372000 4980 torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+device : cuda:0 - NVIDIA GeForce RTX 5070 [sm_120] capped at 11.8 GB of 11.6 GB free
+model  : Qwen/Qwen3-8B  [4-bit NF4]
+context: -2500/+800 chars
+dev    : 6 novels, 4,842 quotes
+
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   0%|          | 1/399 [00:00<01:55,  3.45it/s]Loading weights:   1%|          | 2/399 [00:01<04:07,  1.61it/s]Loading weights:   1%|          | 4/399 [00:01<01:44,  3.77it/s]Loading weights:   2%|▏         | 6/399 [00:01<01:08,  5.76it/s]Loading weights:   4%|▍         | 15/399 [00:01<00:20, 18.42it/s]Loading weights:   5%|▍         | 19/399 [00:01<00:18, 20.56it/s]Loading weights:   7%|▋         | 26/399 [00:01<00:13, 28.25it/s]Loading weights:   8%|▊         | 30/399 [00:01<00:13, 27.97it/s]Loading weights:   9%|▉         | 37/399 [00:02<00:11, 32.14it/s]Loading weights:  10%|█         | 41/399 [00:02<00:11, 30.66it/s]Loading weights:  12%|█▏        | 48/399 [00:02<00:09, 35.79it/s]Loading weights:  13%|█▎        | 52/399 [00:02<00:10, 32.96it/s]Loading weights:  15%|█▍        | 59/399 [00:02<00:09, 37.67it/s]Loading weights:  16%|█▌        | 63/399 [00:02<00:10, 33.27it/s]Loading weights:  18%|█▊        | 70/399 [00:03<00:09, 36.01it/s]Loading weights:  19%|█▊        | 74/399 [00:03<00:10, 31.84it/s]Loading weights:  20%|██        | 81/399 [00:03<00:08, 38.71it/s]Loading weights:  22%|██▏       | 89/399 [00:03<00:06, 45.50it/s]Loading weights:  24%|██▎       | 94/399 [00:03<00:06, 44.84it/s]Loading weights:  26%|██▌       | 104/399 [00:03<00:05, 57.35it/s]Loading weights:  29%|██▊       | 114/399 [00:03<00:04, 63.37it/s]Loading weights:  31%|███       | 122/399 [00:03<00:04, 67.52it/s]Loading weights:  33%|███▎      | 131/399 [00:04<00:03, 71.95it/s]Loading weights:  35%|███▍      | 139/399 [00:04<00:03, 73.80it/s]Loading weights:  37%|███▋      | 149/399 [00:04<00:03, 78.28it/s]Loading weights:  40%|███▉      | 159/399 [00:04<00:02, 82.65it/s]Loading weights:  42%|████▏     | 169/399 [00:04<00:02, 85.88it/s]Loading weights:  45%|████▍     | 178/399 [00:04<00:02, 85.90it/s]Loading weights:  47%|████▋     | 187/399 [00:04<00:02, 81.61it/s]Loading weights:  49%|████▉     | 196/399 [00:04<00:02, 79.32it/s]Loading weights:  51%|█████     | 204/399 [00:04<00:02, 72.91it/s]Loading weights:  54%|█████▎    | 214/399 [00:05<00:02, 79.38it/s]Loading weights:  56%|█████▌    | 224/399 [00:05<00:02, 83.42it/s]Loading weights:  58%|█████▊    | 233/399 [00:05<00:01, 84.26it/s]Loading weights:  61%|██████    | 242/399 [00:05<00:01, 79.59it/s]Loading weights:  63%|██████▎   | 251/399 [00:05<00:01, 75.21it/s]Loading weights:  65%|██████▍   | 259/399 [00:05<00:01, 70.95it/s]Loading weights:  68%|██████▊   | 270/399 [00:05<00:01, 80.76it/s]Loading weights:  70%|███████   | 281/399 [00:05<00:01, 88.26it/s]Loading weights:  73%|███████▎  | 292/399 [00:05<00:01, 94.05it/s]Loading weights:  77%|███████▋  | 306/399 [00:06<00:00, 106.59it/s]Loading weights:  79%|███████▉  | 317/399 [00:06<00:00, 107.51it/s]Loading weights:  82%|████████▏ | 328/399 [00:06<00:00, 108.04it/s]Loading weights:  85%|████████▍ | 339/399 [00:06<00:00, 108.36it/s]Loading weights:  88%|████████▊ | 350/399 [00:06<00:00, 108.55it/s]Loading weights:  90%|█████████ | 361/399 [00:06<00:00, 108.76it/s]Loading weights:  93%|█████████▎| 372/399 [00:06<00:00, 108.75it/s]Loading weights:  96%|█████████▌| 383/399 [00:06<00:00, 108.65it/s]Loading weights:  99%|█████████▊| 394/399 [00:06<00:00, 108.40it/s]Loading weights: 100%|██████████| 399/399 [00:06<00:00, 58.11it/s] 
+12:35:04 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+12:35:04 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/generation_config.json "HTTP/1.1 200 OK"
+12:35:04 LoRA: 43.6M trainable of 4761.5M (0.917%)
+12:35:12 train: 23818 prompts built, gold in candidates for 91.4%
+12:35:14 dev: 4842 prompts built, gold in candidates for 86.1%
+12:35:14 training on 7337 of 8000 quotes (gold reachable)
+12:35:14 optimiser: bitsandbytes AdamW8bit (not paged)
+12:45:04 epoch 1 400/7337 loss 0.4225
+12:45:04 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+12:45:04 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+12:45:04 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+12:45:04 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+12:45:05 epoch 1 checkpointed at example 400/7337
+12:54:55 epoch 1 800/7337 loss 0.1542
+12:54:55 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+12:54:55 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+12:54:55 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+12:54:55 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+12:54:56 epoch 1 checkpointed at example 800/7337
+13:04:45 epoch 1 1200/7337 loss 0.1319
+13:04:45 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+13:04:45 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+13:04:45 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+13:04:45 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+13:04:45 epoch 1 checkpointed at example 1200/7337
+13:14:38 epoch 1 1600/7337 loss 0.1322
+13:14:38 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+13:14:38 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+13:14:39 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+13:14:39 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+13:14:39 epoch 1 checkpointed at example 1600/7337
+13:24:31 epoch 1 2000/7337 loss 0.0826
+13:24:31 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+13:24:31 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+13:24:31 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+13:24:31 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+13:24:32 epoch 1 checkpointed at example 2000/7337
+13:34:23 epoch 1 2400/7337 loss 0.0909
+13:34:23 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+13:34:24 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+13:34:24 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+13:34:24 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+13:34:24 epoch 1 checkpointed at example 2400/7337
+13:44:13 epoch 1 2800/7337 loss 0.1249
+13:44:13 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+13:44:13 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+13:44:13 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+13:44:13 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+13:44:14 epoch 1 checkpointed at example 2800/7337
+13:54:07 epoch 1 3200/7337 loss 0.0633
+13:54:07 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+13:54:07 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+13:54:07 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+13:54:07 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+13:54:07 epoch 1 checkpointed at example 3200/7337
+14:04:02 epoch 1 3600/7337 loss 0.0820
+14:04:02 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+14:04:02 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+14:04:02 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+14:04:02 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+14:04:02 epoch 1 checkpointed at example 3600/7337
+14:13:59 epoch 1 4000/7337 loss 0.0466
+14:13:59 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+14:13:59 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+14:13:59 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+14:13:59 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+14:13:59 epoch 1 checkpointed at example 4000/7337
+14:23:53 epoch 1 4400/7337 loss 0.0687
+14:23:53 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+14:23:53 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+14:23:53 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+14:23:53 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+14:23:53 epoch 1 checkpointed at example 4400/7337
+14:33:46 epoch 1 4800/7337 loss 0.0806
+14:33:46 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+14:33:46 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+14:33:46 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+14:33:46 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+14:33:46 epoch 1 checkpointed at example 4800/7337
+14:43:34 epoch 1 5200/7337 loss 0.0429
+14:43:34 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+14:43:34 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+14:43:34 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+14:43:34 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+14:43:34 epoch 1 checkpointed at example 5200/7337
+14:53:23 epoch 1 5600/7337 loss 0.0265
+14:53:24 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+14:53:24 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+14:53:24 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+14:53:24 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+14:53:24 epoch 1 checkpointed at example 5600/7337
+15:03:18 epoch 1 6000/7337 loss 0.0432
+15:03:18 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+15:03:18 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+15:03:18 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+15:03:18 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+15:03:19 epoch 1 checkpointed at example 6000/7337
+15:13:08 epoch 1 6400/7337 loss 0.0444
+15:13:08 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+15:13:08 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+15:13:08 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+15:13:08 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+15:13:08 epoch 1 checkpointed at example 6400/7337
+15:23:01 epoch 1 6800/7337 loss 0.0506
+15:23:01 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+15:23:01 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+15:23:02 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+15:23:02 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+15:23:02 epoch 1 checkpointed at example 6800/7337
+15:32:56 epoch 1 7200/7337 loss 0.0435
+15:32:57 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+15:32:57 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+15:32:57 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+15:32:57 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+15:32:57 epoch 1 checkpointed at example 7200/7337
+15:36:19 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+15:36:19 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+15:36:19 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+15:36:19 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+15:43:05 scored 500/4842
+15:49:10 scored 1000/4842
+15:55:06 scored 1500/4842
+16:00:36 scored 2000/4842
+16:06:48 scored 2500/4842
+16:12:39 scored 3000/4842
+16:18:25 scored 3500/4842
+16:23:49 scored 4000/4842
+16:29:17 scored 4500/4842
+16:33:09 epoch 1 dev accuracy 0.8273
+16:33:09 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+16:33:09 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+16:33:09 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+16:33:09 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+16:33:09 epoch 1 adapter saved to C:\Users\extra\Desktop\DSC266\FP\outputs\models\generator-lora.adapter
+16:33:09 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+16:33:09 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+16:33:09 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+16:33:09 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+16:33:09 wrote C:\Users\extra\Desktop\DSC266\FP\outputs\results\generator-lora_dev.json
+train  : capped to 8,000 quotes
+
+
+best dev accuracy 0.8273
+(reusing the dev predictions scored during training)
+
+generator-lora
+  all         82.7%  [71.4, 92.2]  n=4,842
+  explicit    94.8%  [90.8, 98.0]  n=1,722
+  anaphoric   78.3%  [66.7, 88.8]  n=1,750
+  implicit    73.2%  [57.0, 88.4]  n=1,370
+  ceiling     86.1%  (gold in candidate set)

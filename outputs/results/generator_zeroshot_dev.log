@@ -1,0 +1,44 @@
+C:\Users\extra\Desktop\DSC266\FP\src\device.py:48: UserWarning: expandable_segments not supported on this platform (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\c10/cuda/CUDAAllocatorConfig.h:40.)
+  a = torch.randn(64, 64, device=f"cuda:{index}")
+device : cuda:0 - NVIDIA GeForce RTX 5070 [sm_120] capped at 11.8 GB of 11.6 GB free
+model  : Qwen/Qwen3-8B  [4-bit NF4]
+context: -2500/+800 chars
+dev    : 6 novels, 4,842 quotes
+
+21:21:56 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+21:21:56 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+21:21:56 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+21:21:56 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+21:21:56 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/tokenizer_config.json "HTTP/1.1 200 OK"
+21:21:56 HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3-8B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+21:21:56 HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3-8B/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+21:21:56 HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3-8B "HTTP/1.1 200 OK"
+21:21:57 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+21:21:57 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+21:21:57 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+21:21:57 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json "HTTP/1.1 200 OK"
+W0814 21:21:57.448000 45864 torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   0%|          | 1/399 [00:00<02:01,  3.28it/s]Loading weights:   1%|          | 2/399 [00:01<04:15,  1.55it/s]Loading weights:   1%|          | 4/399 [00:01<01:47,  3.68it/s]Loading weights:   2%|▏         | 6/399 [00:01<01:09,  5.64it/s]Loading weights:   4%|▍         | 15/399 [00:01<00:21, 18.11it/s]Loading weights:   5%|▍         | 19/399 [00:01<00:18, 20.32it/s]Loading weights:   7%|▋         | 26/399 [00:01<00:13, 26.84it/s]Loading weights:   8%|▊         | 30/399 [00:02<00:14, 25.68it/s]Loading weights:   9%|▉         | 37/399 [00:02<00:11, 30.70it/s]Loading weights:  10%|█         | 41/399 [00:02<00:12, 28.33it/s]Loading weights:  12%|█▏        | 48/399 [00:02<00:10, 32.57it/s]Loading weights:  13%|█▎        | 52/399 [00:02<00:11, 29.42it/s]Loading weights:  15%|█▍        | 59/399 [00:02<00:10, 33.13it/s]Loading weights:  16%|█▌        | 63/399 [00:03<00:10, 30.79it/s]Loading weights:  18%|█▊        | 70/399 [00:03<00:09, 35.79it/s]Loading weights:  19%|█▊        | 74/399 [00:03<00:09, 33.37it/s]Loading weights:  20%|██        | 81/399 [00:03<00:08, 38.33it/s]Loading weights:  21%|██▏       | 85/399 [00:03<00:08, 35.45it/s]Loading weights:  23%|██▎       | 92/399 [00:03<00:07, 40.01it/s]Loading weights:  24%|██▍       | 97/399 [00:03<00:08, 37.33it/s]Loading weights:  26%|██▌       | 103/399 [00:04<00:07, 39.52it/s]Loading weights:  27%|██▋       | 108/399 [00:04<00:07, 37.10it/s]Loading weights:  29%|██▊       | 114/399 [00:04<00:07, 39.89it/s]Loading weights:  30%|██▉       | 119/399 [00:04<00:07, 37.29it/s]Loading weights:  31%|███▏      | 125/399 [00:04<00:06, 39.52it/s]Loading weights:  33%|███▎      | 130/399 [00:04<00:07, 37.41it/s]Loading weights:  34%|███▍      | 136/399 [00:04<00:06, 40.47it/s]Loading weights:  35%|███▌      | 141/399 [00:05<00:06, 37.64it/s]Loading weights:  37%|███▋      | 147/399 [00:05<00:06, 40.32it/s]Loading weights:  38%|███▊      | 152/399 [00:05<00:06, 38.55it/s]Loading weights:  40%|███▉      | 158/399 [00:05<00:05, 40.62it/s]Loading weights:  41%|████      | 163/399 [00:05<00:06, 37.97it/s]Loading weights:  42%|████▏     | 169/399 [00:05<00:05, 40.57it/s]Loading weights:  44%|████▎     | 174/399 [00:05<00:05, 38.07it/s]Loading weights:  45%|████▌     | 180/399 [00:06<00:05, 40.67it/s]Loading weights:  46%|████▋     | 185/399 [00:06<00:05, 38.49it/s]Loading weights:  48%|████▊     | 191/399 [00:06<00:05, 40.63it/s]Loading weights:  49%|████▉     | 196/399 [00:06<00:05, 38.19it/s]Loading weights:  51%|█████     | 202/399 [00:06<00:04, 40.55it/s]Loading weights:  52%|█████▏    | 207/399 [00:06<00:05, 37.74it/s]Loading weights:  53%|█████▎    | 213/399 [00:06<00:04, 40.05it/s]Loading weights:  55%|█████▍    | 218/399 [00:07<00:04, 37.81it/s]Loading weights:  56%|█████▌    | 224/399 [00:07<00:04, 40.33it/s]Loading weights:  57%|█████▋    | 229/399 [00:07<00:04, 37.71it/s]Loading weights:  59%|█████▉    | 235/399 [00:07<00:04, 40.24it/s]Loading weights:  60%|██████    | 240/399 [00:07<00:04, 37.74it/s]Loading weights:  62%|██████▏   | 246/399 [00:07<00:03, 40.16it/s]Loading weights:  63%|██████▎   | 251/399 [00:07<00:03, 37.74it/s]Loading weights:  64%|██████▍   | 257/399 [00:07<00:03, 39.92it/s]Loading weights:  66%|██████▌   | 262/399 [00:08<00:03, 37.25it/s]Loading weights:  67%|██████▋   | 268/399 [00:08<00:03, 39.88it/s]Loading weights:  68%|██████▊   | 273/399 [00:08<00:03, 37.58it/s]Loading weights:  70%|██████▉   | 279/399 [00:08<00:02, 40.25it/s]Loading weights:  71%|███████   | 284/399 [00:08<00:03, 37.87it/s]Loading weights:  73%|███████▎  | 290/399 [00:08<00:02, 40.11it/s]Loading weights:  74%|███████▍  | 295/399 [00:08<00:02, 37.93it/s]Loading weights:  75%|███████▌  | 301/399 [00:09<00:02, 39.90it/s]Loading weights:  77%|███████▋  | 306/399 [00:09<00:02, 37.60it/s]Loading weights:  78%|███████▊  | 312/399 [00:09<00:02, 40.41it/s]Loading weights:  79%|███████▉  | 317/399 [00:09<00:02, 37.05it/s]Loading weights:  81%|████████  | 323/399 [00:09<00:01, 38.81it/s]Loading weights:  82%|████████▏ | 327/399 [00:09<00:02, 35.22it/s]Loading weights:  84%|████████▎ | 334/399 [00:09<00:01, 40.01it/s]Loading weights:  85%|████████▍ | 339/399 [00:10<00:01, 37.48it/s]Loading weights:  86%|████████▋ | 345/399 [00:10<00:01, 40.24it/s]Loading weights:  88%|████████▊ | 350/399 [00:10<00:01, 37.69it/s]Loading weights:  89%|████████▉ | 356/399 [00:10<00:01, 40.35it/s]Loading weights:  90%|█████████ | 361/399 [00:10<00:01, 37.82it/s]Loading weights:  92%|█████████▏| 367/399 [00:10<00:00, 39.99it/s]Loading weights:  93%|█████████▎| 372/399 [00:10<00:00, 37.90it/s]Loading weights:  95%|█████████▍| 378/399 [00:11<00:00, 40.20it/s]Loading weights:  96%|█████████▌| 383/399 [00:11<00:00, 37.23it/s]Loading weights:  97%|█████████▋| 389/399 [00:11<00:00, 39.84it/s]Loading weights:  99%|█████████▊| 394/399 [00:11<00:00, 37.56it/s]Loading weights: 100%|██████████| 399/399 [00:11<00:00, 34.39it/s]
+21:22:11 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+21:22:11 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/generation_config.json "HTTP/1.1 200 OK"
+21:22:12 dev: 4842 prompts built, gold in candidates for 86.1%
+21:27:14 scored 500/4842
+21:31:48 scored 1000/4842
+21:36:17 scored 1500/4842
+21:40:28 scored 2000/4842
+21:45:08 scored 2500/4842
+21:49:37 scored 3000/4842
+21:54:01 scored 3500/4842
+21:58:07 scored 4000/4842
+22:02:17 scored 4500/4842
+
+generator-zeroshot
+  all         74.1%  [63.2, 84.7]  n=4,842
+  explicit    86.4%  [79.1, 92.8]  n=1,722
+  anaphoric   70.2%  [59.3, 81.4]  n=1,750
+  implicit    63.8%  [50.1, 77.3]  n=1,370
+  ceiling     86.1%  (gold in candidate set)
+
+  scoring rule: length-normalised 74.4% vs unnormalised 74.2% (of 4,826 quotes with candidates)
+22:05:13 wrote C:\Users\extra\Desktop\DSC266\FP\outputs\results\generator-zeroshot_dev.json

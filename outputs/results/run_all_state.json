@@ -1,0 +1,173 @@
+{
+  "steps": {
+    "ranker-large": {
+      "status": "done",
+      "attempts": 3,
+      "minutes": 317.8,
+      "argv": [
+        "ranker.py",
+        "--encoder",
+        "answerdotai/ModernBERT-large",
+        "--epochs",
+        "6",
+        "--batch-size",
+        "1",
+        "--memory-fraction",
+        "0.92",
+        "--tag",
+        "_large"
+      ],
+      "finished": "2026-08-25 23:12:26"
+    },
+    "ranker-clamp": {
+      "status": "done",
+      "attempts": 0,
+      "note": "inferred from output file"
+    },
+    "ranker-legacy": {
+      "status": "done",
+      "attempts": 0,
+      "note": "inferred from output file"
+    },
+    "ranker-nofeat": {
+      "status": "done",
+      "attempts": 0,
+      "note": "inferred from output file"
+    },
+    "generator-lora-dev": {
+      "status": "done",
+      "attempts": 0,
+      "note": "inferred from output file"
+    },
+    "generator-small-dev": {
+      "status": "done",
+      "attempts": 0,
+      "note": "inferred from output file"
+    },
+    "compare-dev": {
+      "status": "done",
+      "attempts": 1,
+      "minutes": 1.4,
+      "argv": [
+        "compare.py",
+        "dev",
+        "--checkpoint",
+        "ranker_mb.pt",
+        "--include",
+        "ranker_clamp_dev.json",
+        "ranker_legacy_dev.json",
+        "ranker_nofeat_dev.json",
+        "ranker_large_dev.json",
+        "generator-zeroshot_dev.json",
+        "generator-lora_dev.json",
+        "generator-zeroshot-1.7b_dev.json"
+      ],
+      "finished": "2026-08-26 01:25:44"
+    },
+    "compare-test": {
+      "status": "done",
+      "attempts": 1,
+      "minutes": 1.9,
+      "argv": [
+        "compare.py",
+        "test",
+        "--checkpoint",
+        "ranker_mb.pt"
+      ],
+      "finished": "2026-08-26 01:27:36"
+    },
+    "generator-zeroshot-test": {
+      "status": "done",
+      "attempts": 1,
+      "minutes": 83.6,
+      "argv": [
+        "generator.py",
+        "test",
+        "--zero-shot"
+      ],
+      "finished": "2026-08-26 02:51:12"
+    },
+    "generator-lora-test": {
+      "status": "done",
+      "attempts": 1,
+      "minutes": 106.9,
+      "argv": [
+        "generator.py",
+        "test",
+        "--adapter",
+        "generator-lora.adapter"
+      ],
+      "finished": "2026-08-26 04:38:08"
+    },
+    "compare-test-all": {
+      "status": "done",
+      "attempts": 1,
+      "minutes": 2.1,
+      "argv": [
+        "compare.py",
+        "test",
+        "--checkpoint",
+        "ranker_mb.pt",
+        "--include",
+        "generator-zeroshot_test.json",
+        "generator-lora_test.json"
+      ],
+      "finished": "2026-08-26 04:40:16"
+    },
+    "extrinsic-dev": {
+      "status": "done",
+      "attempts": 1,
+      "minutes": 0.0,
+      "argv": [
+        "extrinsic.py",
+        "dev"
+      ],
+      "finished": "2026-08-26 04:40:19"
+    },
+    "extrinsic-test": {
+      "status": "done",
+      "attempts": 1,
+      "minutes": 0.1,
+      "argv": [
+        "extrinsic.py",
+        "test"
+      ],
+      "finished": "2026-08-26 04:40:23"
+    },
+    "figures": {
+      "status": "done",
+      "attempts": 1,
+      "minutes": 0.3,
+      "argv": [
+        "figures.py",
+        "dev",
+        "--rebuild"
+      ],
+      "finished": "2026-08-26 04:40:42"
+    },
+    "ranker-large-clean": {
+      "status": "done",
+      "attempts": 1,
+      "minutes": 37.3,
+      "argv": [
+        "ranker.py",
+        "--encoder",
+        "answerdotai/ModernBERT-large",
+        "--epochs",
+        "8",
+        "--batch-size",
+        "1",
+        "--grad-accum",
+        "8",
+        "--lr",
+        "2e-5",
+        "--memory-fraction",
+        "0.92",
+        "--tag",
+        "_large_clean"
+      ],
+      "finished": "2026-08-30 00:21:37"
+    }
+  },
+  "started": "2026-08-25 17:52:03"
+}

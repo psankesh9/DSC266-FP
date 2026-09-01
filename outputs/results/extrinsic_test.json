@@ -1,0 +1,548 @@
+{
+  "split": "test",
+  "speaking_rate_wpm": 150.0,
+  "n_novels": 7,
+  "total_words": 549841,
+  "dialogue_words": 215899,
+  "audio_hours": 61.093444444444444,
+  "systems": {
+    "alternation": {
+      "sec_per_audio_minute": 14.551806795055297,
+      "sec_per_dialogue_minute": 37.05982890147708,
+      "ci": [
+        9.86436416292897,
+        20.289875307677235
+      ],
+      "misvoiced_words": 133353,
+      "misvoiced_hours": 14.816999999999998,
+      "duration_error_rate": 0.617663815024618,
+      "quote_error_rate": 0.6375695842709937,
+      "length_bias": 0.9687786717913522,
+      "misvoiced_share_by_type": {
+        "explicit": 0.2705900879620256,
+        "anaphoric": 0.26537085779847475,
+        "implicit": 0.46403905423949965
+      },
+      "rate_by_type": {
+        "explicit": 0.5490315414695008,
+        "anaphoric": 0.6532405441825263,
+        "implicit": 0.644573607074779
+      },
+      "per_novel": {
+        "NightAndDay": [
+          22472,
+          38248,
+          169853
+        ],
+        "TheMysteriousAffairAtStyles": [
+          22699,
+          33149,
+          57032
+        ],
+        "AnneOfGreenGables": [
+          37863,
+          58844,
+          102247
+        ],
+        "ThePictureOfDorianGray": [
+          18320,
+          38826,
+          79916
+        ],
+        "TheInvisibleMan": [
+          15829,
+          22130,
+          49664
+        ],
+        "TheSportOfTheGods": [
+          10054,
+          13742,
+          41130
+        ],
+        "TheAwakening": [
+          6116,
+          10960,
+          49999
+        ]
+      }
+    },
+    "most-frequent": {
+      "sec_per_audio_minute": 13.248775555115024,
+      "sec_per_dialogue_minute": 33.74133275281498,
+      "ci": [
+        9.526166638314116,
+        17.662156586566507
+      ],
+      "misvoiced_words": 121412,
+      "misvoiced_hours": 13.490222222222224,
+      "duration_error_rate": 0.5623555458802496,
+      "quote_error_rate": 0.5753878952978799,
+      "length_bias": 0.9773503239742584,
+      "misvoiced_share_by_type": {
+        "explicit": 0.2349932461371199,
+        "anaphoric": 0.27286429677461865,
+        "implicit": 0.49214245708826143
+      },
+      "rate_by_type": {
+        "explicit": 0.43410982456674224,
+        "anaphoric": 0.6115408044597862,
+        "implicit": 0.6223972167536431
+      },
+      "per_novel": {
+        "NightAndDay": [
+          22571,
+          38248,
+          169853
+        ],
+        "TheMysteriousAffairAtStyles": [
+          19952,
+          33149,
+          57032
+        ],
+        "AnneOfGreenGables": [
+          28477,
+          58844,
+          102247
+        ],
+        "ThePictureOfDorianGray": [
+          19754,
+          38826,
+          79916
+        ],
+        "TheInvisibleMan": [
+          16495,
+          22130,
+          49664
+        ],
+        "TheSportOfTheGods": [
+          8283,
+          13742,
+          41130
+        ],
+        "TheAwakening": [
+          5880,
+          10960,
+          49999
+        ]
+      }
+    },
+    "nearest+speech-verb": {
+      "sec_per_audio_minute": 11.267548254859133,
+      "sec_per_dialogue_minute": 28.69564009096846,
+      "ci": [
+        8.444021244630653,
+        15.272771493492893
+      ],
+      "misvoiced_words": 103256,
+      "misvoiced_hours": 11.472888888888889,
+      "duration_error_rate": 0.4782606681828077,
+      "quote_error_rate": 0.49650598128627266,
+      "length_bias": 0.9632525814569288,
+      "misvoiced_share_by_type": {
+        "explicit": 0.041537537770202214,
+        "anaphoric": 0.34200433873092123,
+        "implicit": 0.6164581234988766
+      },
+      "rate_by_type": {
+        "explicit": 0.06525873742829755,
+        "anaphoric": 0.6518745500526092,
+        "implicit": 0.6630313636032207
+      },
+      "per_novel": {
+        "NightAndDay": [
+          19090,
+          38248,
+          169853
+        ],
+        "TheMysteriousAffairAtStyles": [
+          17420,
+          33149,
+          57032
+        ],
+        "AnneOfGreenGables": [
+          20928,
+          58844,
+          102247
+        ],
+        "ThePictureOfDorianGray": [
+          16638,
+          38826,
+          79916
+        ],
+        "TheInvisibleMan": [
+          15273,
+          22130,
+          49664
+        ],
+        "TheSportOfTheGods": [
+          7933,
+          13742,
+          41130
+        ],
+        "TheAwakening": [
+          5974,
+          10960,
+          49999
+        ]
+      }
+    },
+    "nearest-mention": {
+      "sec_per_audio_minute": 11.524968127149485,
+      "sec_per_dialogue_minute": 29.351224415120033,
+      "ci": [
+        8.441619410269976,
+        16.011520649863346
+      ],
+      "misvoiced_words": 105615,
+      "misvoiced_hours": 11.735,
+      "duration_error_rate": 0.48918707358533386,
+      "quote_error_rate": 0.504559990524695,
+      "length_bias": 0.9695320333992896,
+      "misvoiced_share_by_type": {
+        "explicit": 0.032694219571083656,
+        "anaphoric": 0.3419021919234957,
+        "implicit": 0.6254035885054207
+      },
+      "rate_by_type": {
+        "explicit": 0.05253868508741232,
+        "anaphoric": 0.6665682166392852,
+        "implicit": 0.688020166036478
+      },
+      "per_novel": {
+        "NightAndDay": [
+          19229,
+          38248,
+          169853
+        ],
+        "TheMysteriousAffairAtStyles": [
+          19508,
+          33149,
+          57032
+        ],
+        "AnneOfGreenGables": [
+          21147,
+          58844,
+          102247
+        ],
+        "ThePictureOfDorianGray": [
+          17129,
+          38826,
+          79916
+        ],
+        "TheInvisibleMan": [
+          15299,
+          22130,
+          49664
+        ],
+        "TheSportOfTheGods": [
+          7518,
+          13742,
+          41130
+        ],
+        "TheAwakening": [
+          5785,
+          10960,
+          49999
+        ]
+      }
+    },
+    "random-candidate": {
+      "sec_per_audio_minute": 18.49603794551516,
+      "sec_per_dialogue_minute": 47.10480363503305,
+      "ci": [
+        12.40464207324916,
+        26.031354388095963
+      ],
+      "misvoiced_words": 169498,
+      "misvoiced_hours": 18.833111111111112,
+      "duration_error_rate": 0.7850800605838841,
+      "quote_error_rate": 0.7779225393817364,
+      "length_bias": 1.0092008147852822,
+      "misvoiced_share_by_type": {
+        "explicit": 0.30882960270917653,
+        "anaphoric": 0.24331850523310009,
+        "implicit": 0.4478518920577234
+      },
+      "rate_by_type": {
+        "explicit": 0.7964639471722228,
+        "anaphoric": 0.7613017554870507,
+        "implicit": 0.7907044571523807
+      },
+      "per_novel": {
+        "NightAndDay": [
+          28185,
+          38248,
+          169853
+        ],
+        "TheMysteriousAffairAtStyles": [
+          28412,
+          33149,
+          57032
+        ],
+        "AnneOfGreenGables": [
+          50656,
+          58844,
+          102247
+        ],
+        "ThePictureOfDorianGray": [
+          26755,
+          38826,
+          79916
+        ],
+        "TheInvisibleMan": [
+          16922,
+          22130,
+          49664
+        ],
+        "TheSportOfTheGods": [
+          10988,
+          13742,
+          41130
+        ],
+        "TheAwakening": [
+          7580,
+          10960,
+          49999
+        ]
+      }
+    },
+    "generator-lora": {
+      "sec_per_audio_minute": 2.709728812511253,
+      "sec_per_dialogue_minute": 6.901004636427218,
+      "ci": [
+        1.1497720039997843,
+        5.784283335695054
+      ],
+      "misvoiced_words": 24832,
+      "misvoiced_hours": 2.759111111111111,
+      "duration_error_rate": 0.11501674394045364,
+      "quote_error_rate": 0.12341584744758972,
+      "length_bias": 0.9319446920242322,
+      "misvoiced_share_by_type": {
+        "explicit": 0.08718588917525773,
+        "anaphoric": 0.25789304123711343,
+        "implicit": 0.6549210695876289
+      },
+      "rate_by_type": {
+        "explicit": 0.03294128387322551,
+        "anaphoric": 0.1182138703782327,
+        "implicit": 0.1694009562201181
+      },
+      "per_novel": {
+        "NightAndDay": [
+          2242,
+          38248,
+          169853
+        ],
+        "TheMysteriousAffairAtStyles": [
+          4336,
+          33149,
+          57032
+        ],
+        "AnneOfGreenGables": [
+          2844,
+          58844,
+          102247
+        ],
+        "ThePictureOfDorianGray": [
+          2859,
+          38826,
+          79916
+        ],
+        "TheInvisibleMan": [
+          10712,
+          22130,
+          49664
+        ],
+        "TheSportOfTheGods": [
+          1381,
+          13742,
+          41130
+        ],
+        "TheAwakening": [
+          458,
+          10960,
+          49999
+        ]
+      }
+    },
+    "generator-zeroshot": {
+      "sec_per_audio_minute": 4.5451685123517525,
+      "sec_per_dialogue_minute": 11.57541257717729,
+      "ci": [
+        2.053855850221814,
+        8.47891412028306
+      ],
+      "misvoiced_words": 41652,
+      "misvoiced_hours": 4.628,
+      "duration_error_rate": 0.19292354295295486,
+      "quote_error_rate": 0.22823640885941016,
+      "length_bias": 0.8452794359895163,
+      "misvoiced_share_by_type": {
+        "explicit": 0.178598866801114,
+        "anaphoric": 0.23883607029674445,
+        "implicit": 0.5825650629021416
+      },
+      "rate_by_type": {
+        "explicit": 0.11318716431081965,
+        "anaphoric": 0.1836339135731822,
+        "implicit": 0.25275251815047445
+      },
+      "per_novel": {
+        "NightAndDay": [
+          4135,
+          38248,
+          169853
+        ],
+        "TheMysteriousAffairAtStyles": [
+          6535,
+          33149,
+          57032
+        ],
+        "AnneOfGreenGables": [
+          3608,
+          58844,
+          102247
+        ],
+        "ThePictureOfDorianGray": [
+          11863,
+          38826,
+          79916
+        ],
+        "TheInvisibleMan": [
+          12070,
+          22130,
+          49664
+        ],
+        "TheSportOfTheGods": [
+          2475,
+          13742,
+          41130
+        ],
+        "TheAwakening": [
+          966,
+          10960,
+          49999
+        ]
+      }
+    },
+    "ranker": {
+      "sec_per_audio_minute": 4.571139656737129,
+      "sec_per_dialogue_minute": 11.641554615815728,
+      "ci": [
+        2.6116169336080284,
+        7.913470213664739
+      ],
+      "misvoiced_words": 41890,
+      "misvoiced_hours": 4.654444444444445,
+      "duration_error_rate": 0.19402591026359547,
+      "quote_error_rate": 0.176714437995973,
+      "length_bias": 1.097962976109609,
+      "misvoiced_share_by_type": {
+        "explicit": 0.039174027214132254,
+        "anaphoric": 0.29362616376223444,
+        "implicit": 0.6671998090236333
+      },
+      "rate_by_type": {
+        "explicit": 0.02496842809975199,
+        "anaphoric": 0.22705037564838573,
+        "implicit": 0.2911263189691989
+      },
+      "per_novel": {
+        "NightAndDay": [
+          4231,
+          38248,
+          169853
+        ],
+        "TheMysteriousAffairAtStyles": [
+          6979,
+          33149,
+          57032
+        ],
+        "AnneOfGreenGables": [
+          7415,
+          58844,
+          102247
+        ],
+        "ThePictureOfDorianGray": [
+          6426,
+          38826,
+          79916
+        ],
+        "TheInvisibleMan": [
+          11184,
+          22130,
+          49664
+        ],
+        "TheSportOfTheGods": [
+          3958,
+          13742,
+          41130
+        ],
+        "TheAwakening": [
+          1697,
+          10960,
+          49999
+        ]
+      }
+    }
+  },
+  "paired_vs_reference": {
+    "alternation": {
+      "delta": 3.026838667905812,
+      "ci": [
+        0.9952833959549121,
+        5.9270043569247655
+      ],
+      "p": 1.0
+    },
+    "most-frequent": {
+      "delta": 1.7238074279655393,
+      "ci": [
+        0.8065151492809282,
+        2.7888582219639737
+      ],
+      "p": 1.0
+    },
+    "nearest+speech-verb": {
+      "delta": -0.25741987229035246,
+      "ci": [
+        -0.8897586549353349,
+        0.1033522861881071
+      ],
+      "p": 0.131
+    },
+    "random-candidate": {
+      "delta": 6.971069818365674,
+      "ci": [
+        3.4182064370389487,
+        11.723041486695355
+      ],
+      "p": 1.0
+    },
+    "generator-lora": {
+      "delta": -8.815239314638232,
+      "ci": [
+        -11.699895358687167,
+        -6.680614843106418
+      ],
+      "p": 0.0
+    },
+    "generator-zeroshot": {
+      "delta": -6.979799614797733,
+      "ci": [
+        -9.8332171014527,
+        -4.860449657156908
+      ],
+      "p": 0.0
+    },
+    "ranker": {
+      "delta": -6.953828470412356,
+      "ci": [
+        -9.095119880495641,
+        -5.553462874729009
+      ],
+      "p": 0.0
+    }
+  }
+}

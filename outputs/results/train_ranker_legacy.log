@@ -1,0 +1,177 @@
+
+======================================================================
+2026-08-25 10:02:32  ranker.py --encoder roberta-base --clamp --epochs 8 --tag _legacy
+======================================================================
+W0825 10:02:37.467000 13548 torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+10:02:38 HTTP Request: HEAD https://huggingface.co/roberta-base/resolve/main/config.json "HTTP/1.1 200 OK"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+10:02:38 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+10:02:38 HTTP Request: HEAD https://huggingface.co/roberta-base/resolve/main/tokenizer_config.json "HTTP/1.1 200 OK"
+10:02:38 HTTP Request: GET https://huggingface.co/api/models/roberta-base/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 307 Temporary Redirect"
+10:02:38 HTTP Request: GET https://huggingface.co/api/models/FacebookAI/roberta-base/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+10:02:38 HTTP Request: GET https://huggingface.co/api/models/roberta-base/tree/main?recursive=true&expand=false "HTTP/1.1 307 Temporary Redirect"
+10:02:38 HTTP Request: GET https://huggingface.co/api/models/FacebookAI/roberta-base/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+10:02:39 HTTP Request: HEAD https://huggingface.co/roberta-base/resolve/main/config.json "HTTP/1.1 200 OK"
+10:02:39 HTTP Request: HEAD https://huggingface.co/roberta-base/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+10:02:39 HTTP Request: HEAD https://huggingface.co/roberta-base/resolve/main/config.json "HTTP/1.1 200 OK"
+device : cuda:0 — NVIDIA GeForce RTX 5070 [sm_120] capped at 9.6 GB of 11.6 GB free
+encoder: roberta-base
+context: -900/+400 chars, 512 tokens  [CLAMPED]
+train  : 15 novels, 23,818 quotes
+dev    : 6 novels, 4,842 quotes
+
+features: on
+
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 7199.80it/s]
+[transformers] [1mRobertaModel LOAD REPORT[0m from: roberta-base
+Key                       | Status     | 
+--------------------------+------------+-
+lm_head.layer_norm.bias   | UNEXPECTED | 
+lm_head.layer_norm.weight | UNEXPECTED | 
+lm_head.dense.bias        | UNEXPECTED | 
+lm_head.dense.weight      | UNEXPECTED | 
+lm_head.bias              | UNEXPECTED | 
+pooler.dense.bias         | MISSING    | 
+pooler.dense.weight       | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (526 > 512). Running this sequence through the model will result in indexing errors
+10:02:59 train: 23818 quotes encoded, gold in candidates for 91.4%, 33.8% of candidates out of window
+10:03:02 dev: 4842 quotes encoded, gold in candidates for 86.1%, 33.2% of candidates out of window
+10:03:18 epoch 1 step 200/2978 loss 2.2417
+10:03:33 epoch 1 step 400/2978 loss 1.5412
+10:03:49 epoch 1 step 600/2978 loss 1.3472
+10:04:05 epoch 1 step 800/2978 loss 1.2772
+10:04:20 epoch 1 step 1000/2978 loss 1.2440
+10:04:36 epoch 1 step 1200/2978 loss 1.2090
+10:04:51 epoch 1 step 1400/2978 loss 1.2649
+10:05:07 epoch 1 step 1600/2978 loss 1.1110
+10:05:22 epoch 1 step 1800/2978 loss 1.2307
+10:05:38 epoch 1 step 2000/2978 loss 1.1694
+10:05:53 epoch 1 step 2200/2978 loss 1.1513
+10:06:09 epoch 1 step 2400/2978 loss 1.0281
+10:06:24 epoch 1 step 2600/2978 loss 1.0655
+10:06:40 epoch 1 step 2800/2978 loss 1.0549
+10:07:04 epoch 1 dev accuracy 0.6380
+10:07:04 epoch 1 checkpointed to C:\Users\extra\Desktop\DSC266\FP\outputs\models\ranker_legacy.partial.pt
+10:07:21 epoch 2 step 200/2978 loss 0.8840
+10:07:36 epoch 2 step 400/2978 loss 0.9148
+10:07:52 epoch 2 step 600/2978 loss 0.8176
+10:08:07 epoch 2 step 800/2978 loss 0.8528
+10:08:23 epoch 2 step 1000/2978 loss 0.7913
+10:08:38 epoch 2 step 1200/2978 loss 0.8446
+10:08:54 epoch 2 step 1400/2978 loss 0.8107
+10:09:09 epoch 2 step 1600/2978 loss 0.8076
+10:09:25 epoch 2 step 1800/2978 loss 0.7531
+10:09:40 epoch 2 step 2000/2978 loss 0.7766
+10:09:56 epoch 2 step 2200/2978 loss 0.7568
+10:10:11 epoch 2 step 2400/2978 loss 0.7075
+10:10:27 epoch 2 step 2600/2978 loss 0.6979
+10:10:42 epoch 2 step 2800/2978 loss 0.6971
+10:11:06 epoch 2 dev accuracy 0.7032
+10:11:07 epoch 2 checkpointed to C:\Users\extra\Desktop\DSC266\FP\outputs\models\ranker_legacy.partial.pt
+10:11:23 epoch 3 step 200/2978 loss 0.5909
+10:11:39 epoch 3 step 400/2978 loss 0.6348
+10:11:54 epoch 3 step 600/2978 loss 0.5981
+10:12:10 epoch 3 step 800/2978 loss 0.5968
+10:12:25 epoch 3 step 1000/2978 loss 0.5471
+10:12:41 epoch 3 step 1200/2978 loss 0.5447
+10:12:56 epoch 3 step 1400/2978 loss 0.5640
+10:13:12 epoch 3 step 1600/2978 loss 0.5394
+10:13:27 epoch 3 step 1800/2978 loss 0.5410
+10:13:43 epoch 3 step 2000/2978 loss 0.5383
+10:13:59 epoch 3 step 2200/2978 loss 0.5884
+10:14:14 epoch 3 step 2400/2978 loss 0.5287
+10:14:30 epoch 3 step 2600/2978 loss 0.5334
+10:14:45 epoch 3 step 2800/2978 loss 0.5314
+10:15:09 epoch 3 dev accuracy 0.7311
+10:15:09 epoch 3 checkpointed to C:\Users\extra\Desktop\DSC266\FP\outputs\models\ranker_legacy.partial.pt
+10:15:26 epoch 4 step 200/2978 loss 0.4462
+10:15:41 epoch 4 step 400/2978 loss 0.4774
+10:15:57 epoch 4 step 600/2978 loss 0.4327
+10:16:12 epoch 4 step 800/2978 loss 0.4150
+10:16:28 epoch 4 step 1000/2978 loss 0.4350
+10:16:43 epoch 4 step 1200/2978 loss 0.4007
+10:16:59 epoch 4 step 1400/2978 loss 0.4630
+10:17:15 epoch 4 step 1600/2978 loss 0.5099
+10:17:30 epoch 4 step 1800/2978 loss 0.4342
+10:17:46 epoch 4 step 2000/2978 loss 0.4831
+10:18:01 epoch 4 step 2200/2978 loss 0.4624
+10:18:17 epoch 4 step 2400/2978 loss 0.4520
+10:18:32 epoch 4 step 2600/2978 loss 0.4336
+10:18:48 epoch 4 step 2800/2978 loss 0.4982
+10:19:12 epoch 4 dev accuracy 0.7286
+10:19:28 epoch 5 step 200/2978 loss 0.3084
+10:19:44 epoch 5 step 400/2978 loss 0.3816
+10:19:59 epoch 5 step 600/2978 loss 0.3388
+10:20:15 epoch 5 step 800/2978 loss 0.3048
+10:20:30 epoch 5 step 1000/2978 loss 0.3608
+10:20:46 epoch 5 step 1200/2978 loss 0.3667
+10:21:01 epoch 5 step 1400/2978 loss 0.3549
+10:21:17 epoch 5 step 1600/2978 loss 0.4078
+10:21:32 epoch 5 step 1800/2978 loss 0.3706
+10:21:48 epoch 5 step 2000/2978 loss 0.3495
+10:22:04 epoch 5 step 2200/2978 loss 0.3429
+10:22:19 epoch 5 step 2400/2978 loss 0.3619
+10:22:35 epoch 5 step 2600/2978 loss 0.3372
+10:22:50 epoch 5 step 2800/2978 loss 0.3409
+10:23:14 epoch 5 dev accuracy 0.7338
+10:23:14 epoch 5 checkpointed to C:\Users\extra\Desktop\DSC266\FP\outputs\models\ranker_legacy.partial.pt
+10:23:31 epoch 6 step 200/2978 loss 0.2222
+10:23:46 epoch 6 step 400/2978 loss 0.2677
+10:24:02 epoch 6 step 600/2978 loss 0.2942
+10:24:17 epoch 6 step 800/2978 loss 0.2725
+10:24:33 epoch 6 step 1000/2978 loss 0.2891
+10:24:48 epoch 6 step 1200/2978 loss 0.2516
+10:25:04 epoch 6 step 1400/2978 loss 0.2634
+10:25:20 epoch 6 step 1600/2978 loss 0.2314
+10:25:35 epoch 6 step 1800/2978 loss 0.2240
+10:25:51 epoch 6 step 2000/2978 loss 0.2161
+10:26:06 epoch 6 step 2200/2978 loss 0.2928
+10:26:22 epoch 6 step 2400/2978 loss 0.3041
+10:26:37 epoch 6 step 2600/2978 loss 0.2416
+10:26:53 epoch 6 step 2800/2978 loss 0.2631
+10:27:17 epoch 6 dev accuracy 0.7323
+10:27:33 epoch 7 step 200/2978 loss 0.1443
+10:27:49 epoch 7 step 400/2978 loss 0.1878
+10:28:04 epoch 7 step 600/2978 loss 0.1734
+10:28:20 epoch 7 step 800/2978 loss 0.1754
+10:28:35 epoch 7 step 1000/2978 loss 0.1901
+10:28:51 epoch 7 step 1200/2978 loss 0.1864
+10:29:06 epoch 7 step 1400/2978 loss 0.1470
+10:29:22 epoch 7 step 1600/2978 loss 0.1984
+10:29:38 epoch 7 step 1800/2978 loss 0.1861
+10:29:53 epoch 7 step 2000/2978 loss 0.1658
+10:30:09 epoch 7 step 2200/2978 loss 0.1949
+10:30:24 epoch 7 step 2400/2978 loss 0.1667
+10:30:40 epoch 7 step 2600/2978 loss 0.2533
+10:30:55 epoch 7 step 2800/2978 loss 0.1587
+10:31:19 epoch 7 dev accuracy 0.7365
+10:31:19 epoch 7 checkpointed to C:\Users\extra\Desktop\DSC266\FP\outputs\models\ranker_legacy.partial.pt
+10:31:36 epoch 8 step 200/2978 loss 0.1112
+10:31:51 epoch 8 step 400/2978 loss 0.1328
+10:32:07 epoch 8 step 600/2978 loss 0.1305
+10:32:22 epoch 8 step 800/2978 loss 0.1710
+10:32:38 epoch 8 step 1000/2978 loss 0.1251
+10:32:53 epoch 8 step 1200/2978 loss 0.1649
+10:33:09 epoch 8 step 1400/2978 loss 0.1453
+10:33:24 epoch 8 step 1600/2978 loss 0.1479
+10:33:40 epoch 8 step 1800/2978 loss 0.1558
+10:33:56 epoch 8 step 2000/2978 loss 0.1547
+10:34:11 epoch 8 step 2200/2978 loss 0.1434
+10:34:27 epoch 8 step 2400/2978 loss 0.1403
+10:34:42 epoch 8 step 2600/2978 loss 0.1469
+10:34:58 epoch 8 step 2800/2978 loss 0.1537
+10:35:22 epoch 8 dev accuracy 0.7365
+10:35:36 wrote C:\Users\extra\Desktop\DSC266\FP\outputs\results\ranker_legacy_dev.json
+
+ranker_legacy
+  all         73.6%  [61.1, 86.4]  n=4,842
+  explicit    94.4%  [90.5, 97.7]  n=1,722
+  anaphoric   65.4%  [55.0, 76.4]  n=1,750
+  implicit    58.2%  [45.2, 72.1]  n=1,370
+  ceiling     86.1%  (gold in candidate set)
+
+saved C:\Users\extra\Desktop\DSC266\FP\outputs\models\ranker_legacy.pt (best dev accuracy 0.7365)

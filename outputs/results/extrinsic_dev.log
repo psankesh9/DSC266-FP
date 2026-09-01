@@ -1,0 +1,51 @@
+
+======================================================================
+2026-08-26 04:40:16  extrinsic.py dev
+======================================================================
+INFO skipping training artefact ranker_clamp_dev.json
+INFO skipping training artefact ranker_e8_dev.json
+INFO skipping training artefact ranker_large_dev.json
+INFO skipping training artefact ranker_legacy_dev.json
+INFO skipping training artefact ranker_mb_dev.json
+INFO skipping training artefact ranker_nofeat_dev.json
+INFO skipping training artefact ranker_smoke_dev.json
+extrinsic audio metric on dev: 6 novels, 34.7 h of audio at 150 wpm, 37% of it dialogue
+
+system                  s/audio min           95% CI  s/dialogue min  h mis-voiced  length bias
+-----------------------------------------------------------------------------------------------
+random-candidate             18.20s   [13.85, 24.93]          49.29s        10.53h         1.03
+alternation                  14.71s   [10.94, 20.91]          39.84s         8.51h         1.06
+most-frequent                14.53s   [10.67, 20.42]          39.35s         8.40h         1.06
+generator-zeroshot-1.7b       13.82s   [10.61, 19.03]          37.42s         7.99h         0.96
+nearest+speech-verb          12.64s    [8.85, 18.10]          34.24s         7.31h         1.11
+nearest-mention              12.63s    [8.53, 18.74]          34.21s         7.31h         1.12
+generator-zeroshot            7.06s    [2.93, 12.94]          19.13s         4.08h         1.23
+ranker                        6.37s    [2.75, 11.30]          17.25s         3.68h         1.37
+generator-lora                5.51s    [1.58, 11.11]          14.91s         3.19h         1.44
+
+paired bootstrap vs nearest-mention (negative = less mis-voiced audio):
+  random-candidate        +5.57s [+3.96, +8.43]*  p=1.000
+  alternation             +2.08s [+0.95, +4.26]*  p=1.000
+  most-frequent           +1.90s [+1.11, +3.28]*  p=1.000
+  generator-zeroshot-1.7b  +1.19s [-0.55, +4.34]   p=0.890
+  nearest+speech-verb     +0.01s [-0.84, +0.39]   p=0.547
+  generator-zeroshot      -5.57s [-7.00, -4.43]*  p=0.000
+  ranker                  -6.26s [-8.04, -4.97]*  p=0.000
+  generator-lora          -7.12s [-8.49, -5.87]*  p=0.000
+
+* interval excludes zero
+
+share of mis-voiced audio by quote type (and duration-weighted error rate within type):
+system                               explicit              anaphoric               implicit
+-------------------------------------------------------------------------------------------
+random-candidate            25.5% ( 75.6%)      39.3% ( 83.0%)      35.1% ( 86.6%)
+alternation                 22.7% ( 54.4%)      40.2% ( 68.5%)      37.1% ( 73.9%)
+most-frequent               20.4% ( 48.1%)      40.8% ( 68.7%)      38.8% ( 76.5%)
+generator-zeroshot-1.7b      23.6% ( 53.0%)      39.7% ( 63.6%)      36.7% ( 68.7%)
+nearest+speech-verb          5.8% ( 12.0%)      48.3% ( 70.8%)      45.8% ( 78.5%)
+nearest-mention              5.3% ( 10.9%)      48.5% ( 71.0%)      46.2% ( 79.1%)
+generator-zeroshot          11.2% ( 12.8%)      41.4% ( 33.9%)      47.4% ( 45.4%)
+ranker                       5.5% (  5.7%)      39.6% ( 29.2%)      54.9% ( 47.4%)
+generator-lora               6.0% (  5.4%)      39.9% ( 25.5%)      54.1% ( 40.4%)
+
+wrote C:\Users\extra\Desktop\DSC266\FP\outputs\results\extrinsic_dev.json

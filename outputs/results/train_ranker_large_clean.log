@@ -1,0 +1,1046 @@
+
+======================================================================
+2026-08-26 04:41:18  ranker.py --encoder answerdotai/ModernBERT-large --epochs 8 --batch-size 1 --grad-accum 8 --lr 2e-5 --memory-fraction 0.92 --tag _large_clean
+======================================================================
+W0826 04:41:24.165000 22468 torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+04:41:25 HTTP Request: HEAD https://huggingface.co/answerdotai/ModernBERT-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+04:41:25 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+04:41:25 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/answerdotai/ModernBERT-large/45bb4654a4d5aaff24dd11d4781fa46d39bf8c13/config.json "HTTP/1.1 200 OK"
+04:41:25 HTTP Request: HEAD https://huggingface.co/answerdotai/ModernBERT-large/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+04:41:25 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/answerdotai/ModernBERT-large/45bb4654a4d5aaff24dd11d4781fa46d39bf8c13/tokenizer_config.json "HTTP/1.1 200 OK"
+04:41:25 HTTP Request: HEAD https://huggingface.co/answerdotai/ModernBERT-large/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+04:41:25 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/answerdotai/ModernBERT-large/45bb4654a4d5aaff24dd11d4781fa46d39bf8c13/tokenizer_config.json "HTTP/1.1 200 OK"
+04:41:25 HTTP Request: GET https://huggingface.co/api/models/answerdotai/ModernBERT-large/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+04:41:25 HTTP Request: GET https://huggingface.co/api/models/answerdotai/ModernBERT-large/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+04:41:26 HTTP Request: HEAD https://huggingface.co/answerdotai/ModernBERT-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+04:41:26 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/answerdotai/ModernBERT-large/45bb4654a4d5aaff24dd11d4781fa46d39bf8c13/config.json "HTTP/1.1 200 OK"
+04:41:26 HTTP Request: HEAD https://huggingface.co/answerdotai/ModernBERT-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+04:41:26 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/answerdotai/ModernBERT-large/45bb4654a4d5aaff24dd11d4781fa46d39bf8c13/config.json "HTTP/1.1 200 OK"
+device : cuda:0 — NVIDIA GeForce RTX 5070 [sm_120] capped at 11.8 GB of 11.6 GB free
+encoder: answerdotai/ModernBERT-large
+context: -2500/+800 chars, 1152 tokens
+train  : 15 novels, 23,818 quotes
+dev    : 6 novels, 4,842 quotes
+
+batch  : 1 x 8 accum = 8 effective, lr 2e-05
+features: on
+
+Loading weights:   0%|          | 0/170 [00:00<?, ?it/s]Loading weights: 100%|##########| 170/170 [00:00<00:00, 4951.95it/s]
+[transformers] [1mModernBertModel LOAD REPORT[0m from: answerdotai/ModernBERT-large
+Key               | Status     |  | 
+------------------+------------+--+-
+decoder.bias      | UNEXPECTED |  | 
+head.dense.weight | UNEXPECTED |  | 
+head.norm.weight  | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+04:42:04 train: 23818 quotes encoded, gold in candidates for 91.4%, 0.3% of candidates out of window
+04:42:11 dev: 4842 quotes encoded, gold in candidates for 86.1%, 0.4% of candidates out of window
+04:42:28 epoch 1 step 200/23818 loss 9.3403
+04:43:03 epoch 1 step 600/23818 loss 6.3410
+04:43:20 epoch 1 step 800/23818 loss 4.4930
+04:43:37 epoch 1 step 1000/23818 loss 4.0265
+04:44:12 epoch 1 step 1400/23818 loss 3.3541
+04:44:30 epoch 1 step 1600/23818 loss 3.8645
+04:44:47 epoch 1 step 1800/23818 loss 2.4240
+04:45:04 epoch 1 step 2000/23818 loss 2.2116
+04:45:22 epoch 1 step 2200/23818 loss 2.4218
+04:45:40 epoch 1 step 2400/23818 loss 1.9509
+04:45:57 epoch 1 step 2600/23818 loss 1.6968
+04:46:14 epoch 1 step 2800/23818 loss 1.6464
+04:46:31 epoch 1 step 3000/23818 loss 1.5426
+04:46:49 epoch 1 step 3200/23818 loss 1.2950
+04:47:07 epoch 1 step 3400/23818 loss 1.3560
+04:47:24 epoch 1 step 3600/23818 loss 1.5322
+04:47:42 epoch 1 step 3800/23818 loss 1.3637
+04:47:59 epoch 1 step 4000/23818 loss 1.3054
+04:48:17 epoch 1 step 4200/23818 loss 1.1404
+04:48:34 epoch 1 step 4400/23818 loss 1.4240
+04:48:52 epoch 1 step 4600/23818 loss 1.3694
+04:49:09 epoch 1 step 4800/23818 loss 1.2601
+04:49:27 epoch 1 step 5000/23818 loss 1.3324
+04:49:44 epoch 1 step 5200/23818 loss 1.2052
+04:50:01 epoch 1 step 5400/23818 loss 1.2132
+04:50:19 epoch 1 step 5600/23818 loss 1.2534
+04:50:36 epoch 1 step 5800/23818 loss 1.2410
+04:50:53 epoch 1 step 6000/23818 loss 1.1343
+04:51:11 epoch 1 step 6200/23818 loss 1.2111
+04:51:28 epoch 1 step 6400/23818 loss 1.1287
+04:51:46 epoch 1 step 6600/23818 loss 1.1850
+04:52:03 epoch 1 step 6800/23818 loss 1.1763
+04:52:21 epoch 1 step 7000/23818 loss 1.1726
+04:52:38 epoch 1 step 7200/23818 loss 1.0372
+04:52:56 epoch 1 step 7400/23818 loss 1.0126
+04:53:13 epoch 1 step 7600/23818 loss 1.0738
+04:53:49 epoch 1 step 8000/23818 loss 1.1094
+04:54:07 epoch 1 step 8200/23818 loss 1.0539
+04:54:24 epoch 1 step 8400/23818 loss 0.9951
+04:55:00 epoch 1 step 8800/23818 loss 1.0865
+04:55:17 epoch 1 step 9000/23818 loss 1.1142
+04:55:35 epoch 1 step 9200/23818 loss 1.0024
+04:55:52 epoch 1 step 9400/23818 loss 0.9610
+04:56:10 epoch 1 step 9600/23818 loss 1.0343
+04:56:28 epoch 1 step 9800/23818 loss 1.0203
+04:56:45 epoch 1 step 10000/23818 loss 0.9171
+04:57:20 epoch 1 step 10400/23818 loss 0.9165
+04:57:37 epoch 1 step 10600/23818 loss 0.9136
+04:57:55 epoch 1 step 10800/23818 loss 0.9308
+04:58:12 epoch 1 step 11000/23818 loss 1.0038
+04:58:30 epoch 1 step 11200/23818 loss 0.9209
+04:58:48 epoch 1 step 11400/23818 loss 0.9617
+04:59:05 epoch 1 step 11600/23818 loss 0.9185
+04:59:22 epoch 1 step 11800/23818 loss 0.8945
+04:59:40 epoch 1 step 12000/23818 loss 0.9532
+04:59:57 epoch 1 step 12200/23818 loss 0.8927
+05:00:14 epoch 1 step 12400/23818 loss 0.8965
+05:00:32 epoch 1 step 12600/23818 loss 1.0609
+05:00:49 epoch 1 step 12800/23818 loss 0.9592
+05:01:07 epoch 1 step 13000/23818 loss 0.8849
+05:01:25 epoch 1 step 13200/23818 loss 0.9155
+05:01:42 epoch 1 step 13400/23818 loss 0.8971
+05:02:00 epoch 1 step 13600/23818 loss 0.8652
+05:02:18 epoch 1 step 13800/23818 loss 0.9968
+05:02:35 epoch 1 step 14000/23818 loss 0.9960
+05:02:52 epoch 1 step 14200/23818 loss 0.8414
+05:03:10 epoch 1 step 14400/23818 loss 0.7141
+05:03:28 epoch 1 step 14600/23818 loss 0.9325
+05:03:45 epoch 1 step 14800/23818 loss 0.7144
+05:04:02 epoch 1 step 15000/23818 loss 0.7527
+05:04:20 epoch 1 step 15200/23818 loss 0.8336
+05:04:55 epoch 1 step 15600/23818 loss 0.7603
+05:05:13 epoch 1 step 15800/23818 loss 0.7900
+05:05:30 epoch 1 step 16000/23818 loss 0.7688
+05:05:48 epoch 1 step 16200/23818 loss 0.6091
+05:06:05 epoch 1 step 16400/23818 loss 0.7776
+05:06:23 epoch 1 step 16600/23818 loss 0.6615
+05:06:41 epoch 1 step 16800/23818 loss 0.6214
+05:06:58 epoch 1 step 17000/23818 loss 0.6089
+05:07:33 epoch 1 step 17400/23818 loss 0.5213
+05:07:51 epoch 1 step 17600/23818 loss 0.7188
+05:08:08 epoch 1 step 17800/23818 loss 0.5323
+05:08:26 epoch 1 step 18000/23818 loss 0.4205
+05:08:43 epoch 1 step 18200/23818 loss 0.6246
+05:09:00 epoch 1 step 18400/23818 loss 0.5885
+05:09:18 epoch 1 step 18600/23818 loss 0.6043
+05:09:36 epoch 1 step 18800/23818 loss 0.5857
+05:09:54 epoch 1 step 19000/23818 loss 0.6448
+05:10:11 epoch 1 step 19200/23818 loss 0.5003
+05:10:29 epoch 1 step 19400/23818 loss 0.7703
+05:10:47 epoch 1 step 19600/23818 loss 0.4136
+05:11:22 epoch 1 step 20000/23818 loss 0.4793
+05:11:39 epoch 1 step 20200/23818 loss 0.6261
+05:11:57 epoch 1 step 20400/23818 loss 0.5361
+05:12:32 epoch 1 step 20800/23818 loss 0.5274
+05:12:49 epoch 1 step 21000/23818 loss 0.4386
+05:13:07 epoch 1 step 21200/23818 loss 0.4640
+05:13:24 epoch 1 step 21400/23818 loss 0.6297
+05:13:42 epoch 1 step 21600/23818 loss 0.5253
+05:13:59 epoch 1 step 21800/23818 loss 0.5367
+05:14:17 epoch 1 step 22000/23818 loss 0.4594
+05:14:34 epoch 1 step 22200/23818 loss 0.4963
+05:15:09 epoch 1 step 22600/23818 loss 0.3905
+05:15:27 epoch 1 step 22800/23818 loss 0.5224
+05:15:45 epoch 1 step 23000/23818 loss 0.3927
+05:16:02 epoch 1 step 23200/23818 loss 0.4842
+05:16:20 epoch 1 step 23400/23818 loss 0.5901
+05:16:37 epoch 1 step 23600/23818 loss 0.4744
+05:16:55 epoch 1 step 23800/23818 loss 0.5898
+05:19:07 epoch 1 dev accuracy 0.7860
+05:19:08 epoch 1 checkpointed to C:\Users\extra\Desktop\DSC266\FP\outputs\models\ranker_large_clean.partial.pt
+05:19:28 epoch 2 step 200/23818 loss 0.2263
+05:19:45 epoch 2 step 400/23818 loss 0.4441
+05:20:03 epoch 2 step 600/23818 loss 0.4711
+05:20:21 epoch 2 step 800/23818 loss 0.4125
+05:20:38 epoch 2 step 1000/23818 loss 0.5408
+05:20:56 epoch 2 step 1200/23818 loss 0.2527
+05:21:13 epoch 2 step 1400/23818 loss 0.6117
+05:21:31 epoch 2 step 1600/23818 loss 0.5418
+05:21:49 epoch 2 step 1800/23818 loss 0.2771
+05:22:23 epoch 2 step 2200/23818 loss 0.4106
+05:22:40 epoch 2 step 2400/23818 loss 0.3528
+05:22:58 epoch 2 step 2600/23818 loss 0.4270
+05:23:15 epoch 2 step 2800/23818 loss 0.2456
+05:23:33 epoch 2 step 3000/23818 loss 0.3510
+05:23:50 epoch 2 step 3200/23818 loss 0.5466
+05:24:08 epoch 2 step 3400/23818 loss 0.3848
+05:24:25 epoch 2 step 3600/23818 loss 0.2804
+05:24:43 epoch 2 step 3800/23818 loss 0.4849
+05:25:01 epoch 2 step 4000/23818 loss 0.3485
+05:25:19 epoch 2 step 4200/23818 loss 0.3561
+05:25:36 epoch 2 step 4400/23818 loss 0.3963
+05:25:54 epoch 2 step 4600/23818 loss 0.2043
+05:26:11 epoch 2 step 4800/23818 loss 0.5507
+05:26:29 epoch 2 step 5000/23818 loss 0.3896
+05:27:04 epoch 2 step 5400/23818 loss 0.4180
+05:27:22 epoch 2 step 5600/23818 loss 0.4619
+05:27:39 epoch 2 step 5800/23818 loss 0.2820
+05:27:56 epoch 2 step 6000/23818 loss 0.3249
+05:28:14 epoch 2 step 6200/23818 loss 0.7350
+05:28:31 epoch 2 step 6400/23818 loss 0.3341
+05:28:49 epoch 2 step 6600/23818 loss 0.5519
+05:29:06 epoch 2 step 6800/23818 loss 0.2434
+05:29:24 epoch 2 step 7000/23818 loss 0.3949
+05:29:59 epoch 2 step 7400/23818 loss 0.4211
+05:30:16 epoch 2 step 7600/23818 loss 0.5411
+05:30:34 epoch 2 step 7800/23818 loss 0.4594
+05:31:25 epoch 2 step 8400/23818 loss 0.3313
+05:31:43 epoch 2 step 8600/23818 loss 0.2859
+05:32:00 epoch 2 step 8800/23818 loss 0.5247
+05:32:18 epoch 2 step 9000/23818 loss 0.2299
+05:32:36 epoch 2 step 9200/23818 loss 0.3933
+05:32:54 epoch 2 step 9400/23818 loss 0.2507
+05:33:11 epoch 2 step 9600/23818 loss 0.2564
+05:33:29 epoch 2 step 9800/23818 loss 0.3310
+05:33:46 epoch 2 step 10000/23818 loss 0.2939
+05:34:04 epoch 2 step 10200/23818 loss 0.5991
+05:34:21 epoch 2 step 10400/23818 loss 0.3769
+05:34:39 epoch 2 step 10600/23818 loss 0.3956
+05:34:56 epoch 2 step 10800/23818 loss 0.3267
+05:35:13 epoch 2 step 11000/23818 loss 0.4533
+05:35:31 epoch 2 step 11200/23818 loss 0.5035
+05:35:49 epoch 2 step 11400/23818 loss 0.4332
+05:36:06 epoch 2 step 11600/23818 loss 0.4641
+05:36:24 epoch 2 step 11800/23818 loss 0.2268
+05:36:42 epoch 2 step 12000/23818 loss 0.3163
+05:37:00 epoch 2 step 12200/23818 loss 0.3927
+05:37:17 epoch 2 step 12400/23818 loss 0.2935
+05:37:34 epoch 2 step 12600/23818 loss 0.2099
+05:37:52 epoch 2 step 12800/23818 loss 0.3169
+05:38:10 epoch 2 step 13000/23818 loss 0.4086
+05:38:27 epoch 2 step 13200/23818 loss 0.3028
+05:38:45 epoch 2 step 13400/23818 loss 0.3023
+05:39:02 epoch 2 step 13600/23818 loss 0.2273
+05:39:20 epoch 2 step 13800/23818 loss 0.2521
+05:39:38 epoch 2 step 14000/23818 loss 0.5020
+05:39:55 epoch 2 step 14200/23818 loss 0.1918
+05:40:12 epoch 2 step 14400/23818 loss 0.3113
+05:40:31 epoch 2 step 14600/23818 loss 0.1371
+05:40:48 epoch 2 step 14800/23818 loss 0.2652
+05:41:06 epoch 2 step 15000/23818 loss 0.3744
+05:41:23 epoch 2 step 15200/23818 loss 0.3866
+05:41:41 epoch 2 step 15400/23818 loss 0.2549
+05:41:58 epoch 2 step 15600/23818 loss 0.2573
+05:42:16 epoch 2 step 15800/23818 loss 0.3662
+05:42:33 epoch 2 step 16000/23818 loss 0.5619
+05:42:50 epoch 2 step 16200/23818 loss 0.2507
+05:43:08 epoch 2 step 16400/23818 loss 0.3200
+05:43:25 epoch 2 step 16600/23818 loss 0.1397
+05:43:42 epoch 2 step 16800/23818 loss 0.4009
+05:43:59 epoch 2 step 17000/23818 loss 0.3251
+05:44:16 epoch 2 step 17200/23818 loss 0.2788
+05:44:34 epoch 2 step 17400/23818 loss 0.3044
+05:44:51 epoch 2 step 17600/23818 loss 0.4544
+05:45:09 epoch 2 step 17800/23818 loss 0.3354
+05:45:26 epoch 2 step 18000/23818 loss 0.1540
+05:45:44 epoch 2 step 18200/23818 loss 0.4914
+05:46:02 epoch 2 step 18400/23818 loss 0.4477
+05:46:20 epoch 2 step 18600/23818 loss 0.3795
+05:46:37 epoch 2 step 18800/23818 loss 0.3133
+05:46:55 epoch 2 step 19000/23818 loss 0.3488
+05:47:13 epoch 2 step 19200/23818 loss 0.3773
+05:47:30 epoch 2 step 19400/23818 loss 0.3500
+05:48:05 epoch 2 step 19800/23818 loss 0.1294
+05:48:23 epoch 2 step 20000/23818 loss 0.3426
+05:48:58 epoch 2 step 20400/23818 loss 0.4090
+05:49:15 epoch 2 step 20600/23818 loss 0.1802
+05:49:33 epoch 2 step 20800/23818 loss 0.3896
+05:49:51 epoch 2 step 21000/23818 loss 0.2815
+05:50:08 epoch 2 step 21200/23818 loss 0.4122
+05:50:26 epoch 2 step 21400/23818 loss 0.1936
+05:50:43 epoch 2 step 21600/23818 loss 0.2017
+05:51:00 epoch 2 step 21800/23818 loss 0.1681
+05:51:17 epoch 2 step 22000/23818 loss 0.5306
+05:51:35 epoch 2 step 22200/23818 loss 0.3438
+05:51:52 epoch 2 step 22400/23818 loss 0.3913
+05:52:10 epoch 2 step 22600/23818 loss 0.2585
+05:52:27 epoch 2 step 22800/23818 loss 0.3306
+05:53:02 epoch 2 step 23200/23818 loss 0.2604
+05:53:37 epoch 2 step 23600/23818 loss 0.3133
+05:53:55 epoch 2 step 23800/23818 loss 0.1692
+05:56:07 epoch 2 dev accuracy 0.7968
+05:56:08 epoch 2 checkpointed to C:\Users\extra\Desktop\DSC266\FP\outputs\models\ranker_large_clean.partial.pt
+05:56:29 epoch 3 step 200/23818 loss 0.1930
+05:56:46 epoch 3 step 400/23818 loss 0.1387
+05:57:04 epoch 3 step 600/23818 loss 0.1563
+05:57:39 epoch 3 step 1000/23818 loss 0.1426
+05:57:57 epoch 3 step 1200/23818 loss 0.0962
+05:58:14 epoch 3 step 1400/23818 loss 0.1343
+05:58:31 epoch 3 step 1600/23818 loss 0.0805
+05:58:49 epoch 3 step 1800/23818 loss 0.1814
+05:59:06 epoch 3 step 2000/23818 loss 0.2859
+05:59:24 epoch 3 step 2200/23818 loss 0.1749
+05:59:41 epoch 3 step 2400/23818 loss 0.1642
+05:59:59 epoch 3 step 2600/23818 loss 0.0597
+06:00:16 epoch 3 step 2800/23818 loss 0.1194
+06:00:34 epoch 3 step 3000/23818 loss 0.3878
+06:00:52 epoch 3 step 3200/23818 loss 0.0148
+06:01:09 epoch 3 step 3400/23818 loss 0.1913
+06:01:27 epoch 3 step 3600/23818 loss 0.2160
+06:01:45 epoch 3 step 3800/23818 loss 0.1528
+06:02:02 epoch 3 step 4000/23818 loss 0.2649
+06:02:20 epoch 3 step 4200/23818 loss 0.1595
+06:02:37 epoch 3 step 4400/23818 loss 0.1122
+06:03:48 epoch 3 step 5200/23818 loss 0.2298
+06:04:06 epoch 3 step 5400/23818 loss 0.2158
+06:04:23 epoch 3 step 5600/23818 loss 0.2155
+06:04:40 epoch 3 step 5800/23818 loss 0.1826
+06:04:58 epoch 3 step 6000/23818 loss 0.2059
+06:05:33 epoch 3 step 6400/23818 loss 0.1703
+06:05:51 epoch 3 step 6600/23818 loss 0.2000
+06:06:08 epoch 3 step 6800/23818 loss 0.2499
+06:06:26 epoch 3 step 7000/23818 loss 0.3754
+06:06:44 epoch 3 step 7200/23818 loss 0.0460
+06:07:01 epoch 3 step 7400/23818 loss 0.2530
+06:07:19 epoch 3 step 7600/23818 loss 0.0622
+06:07:36 epoch 3 step 7800/23818 loss 0.1490
+06:07:54 epoch 3 step 8000/23818 loss 0.1277
+06:08:11 epoch 3 step 8200/23818 loss 0.0663
+06:08:28 epoch 3 step 8400/23818 loss 0.1151
+06:08:46 epoch 3 step 8600/23818 loss 0.1175
+06:09:04 epoch 3 step 8800/23818 loss 0.1972
+06:09:22 epoch 3 step 9000/23818 loss 0.1424
+06:09:39 epoch 3 step 9200/23818 loss 0.0859
+06:09:57 epoch 3 step 9400/23818 loss 0.0992
+06:10:31 epoch 3 step 9800/23818 loss 0.2775
+06:11:06 epoch 3 step 10200/23818 loss 0.1969
+06:11:24 epoch 3 step 10400/23818 loss 0.3076
+06:11:41 epoch 3 step 10600/23818 loss 0.0482
+06:11:58 epoch 3 step 10800/23818 loss 0.1073
+06:12:16 epoch 3 step 11000/23818 loss 0.1689
+06:12:34 epoch 3 step 11200/23818 loss 0.1576
+06:12:51 epoch 3 step 11400/23818 loss 0.2083
+06:13:08 epoch 3 step 11600/23818 loss 0.0824
+06:13:26 epoch 3 step 11800/23818 loss 0.1589
+06:13:43 epoch 3 step 12000/23818 loss 0.0460
+06:14:01 epoch 3 step 12200/23818 loss 0.2436
+06:14:18 epoch 3 step 12400/23818 loss 0.0997
+06:14:36 epoch 3 step 12600/23818 loss 0.3744
+06:14:52 epoch 3 step 12800/23818 loss 0.1555
+06:15:10 epoch 3 step 13000/23818 loss 0.0885
+06:15:27 epoch 3 step 13200/23818 loss 0.2065
+06:15:45 epoch 3 step 13400/23818 loss 0.2977
+06:16:03 epoch 3 step 13600/23818 loss 0.1560
+06:16:20 epoch 3 step 13800/23818 loss 0.1734
+06:16:38 epoch 3 step 14000/23818 loss 0.1462
+06:16:55 epoch 3 step 14200/23818 loss 0.1779
+06:17:13 epoch 3 step 14400/23818 loss 0.1254
+06:17:31 epoch 3 step 14600/23818 loss 0.1383
+06:17:48 epoch 3 step 14800/23818 loss 0.2221
+06:18:24 epoch 3 step 15200/23818 loss 0.1321
+06:18:41 epoch 3 step 15400/23818 loss 0.1012
+06:18:58 epoch 3 step 15600/23818 loss 0.3166
+06:19:16 epoch 3 step 15800/23818 loss 0.0456
+06:19:51 epoch 3 step 16200/23818 loss 0.2422
+06:20:09 epoch 3 step 16400/23818 loss 0.1967
+06:20:26 epoch 3 step 16600/23818 loss 0.1470
+06:20:44 epoch 3 step 16800/23818 loss 0.1789
+06:21:01 epoch 3 step 17000/23818 loss 0.1812
+06:21:19 epoch 3 step 17200/23818 loss 0.1774
+06:21:36 epoch 3 step 17400/23818 loss 0.1222
+06:21:53 epoch 3 step 17600/23818 loss 0.1124
+06:22:11 epoch 3 step 17800/23818 loss 0.2070
+06:22:29 epoch 3 step 18000/23818 loss 0.0558
+06:22:46 epoch 3 step 18200/23818 loss 0.2865
+06:23:03 epoch 3 step 18400/23818 loss 0.1628
+06:23:38 epoch 3 step 18800/23818 loss 0.1296
+06:23:56 epoch 3 step 19000/23818 loss 0.1494
+06:24:14 epoch 3 step 19200/23818 loss 0.1689
+06:24:31 epoch 3 step 19400/23818 loss 0.2285
+06:24:49 epoch 3 step 19600/23818 loss 0.2922
+06:25:06 epoch 3 step 19800/23818 loss 0.1716
+06:25:23 epoch 3 step 20000/23818 loss 0.2347
+06:25:41 epoch 3 step 20200/23818 loss 0.2709
+06:25:58 epoch 3 step 20400/23818 loss 0.1303
+06:26:16 epoch 3 step 20600/23818 loss 0.0854
+06:26:33 epoch 3 step 20800/23818 loss 0.3173
+06:26:51 epoch 3 step 21000/23818 loss 0.0799
+06:27:07 epoch 3 step 21200/23818 loss 0.1033
+06:27:25 epoch 3 step 21400/23818 loss 0.1172
+06:27:43 epoch 3 step 21600/23818 loss 0.1681
+06:28:00 epoch 3 step 21800/23818 loss 0.3838
+06:28:17 epoch 3 step 22000/23818 loss 0.2375
+06:28:35 epoch 3 step 22200/23818 loss 0.2016
+06:28:52 epoch 3 step 22400/23818 loss 0.1777
+06:29:09 epoch 3 step 22600/23818 loss 0.1116
+06:29:27 epoch 3 step 22800/23818 loss 0.3664
+06:29:45 epoch 3 step 23000/23818 loss 0.1068
+06:30:02 epoch 3 step 23200/23818 loss 0.1189
+06:30:20 epoch 3 step 23400/23818 loss 0.3186
+06:30:37 epoch 3 step 23600/23818 loss 0.2194
+06:30:55 epoch 3 step 23800/23818 loss 0.2156
+06:33:07 epoch 3 dev accuracy 0.7767
+06:33:28 epoch 4 step 200/23818 loss 0.0714
+06:34:04 epoch 4 step 600/23818 loss 0.1112
+06:34:21 epoch 4 step 800/23818 loss 0.1907
+06:34:39 epoch 4 step 1000/23818 loss 0.0271
+06:34:57 epoch 4 step 1200/23818 loss 0.1850
+06:35:14 epoch 4 step 1400/23818 loss 0.0206
+06:35:49 epoch 4 step 1800/23818 loss 0.1770
+06:36:24 epoch 4 step 2200/23818 loss 0.0961
+06:36:42 epoch 4 step 2400/23818 loss 0.0873
+06:36:59 epoch 4 step 2600/23818 loss 0.0791
+06:37:17 epoch 4 step 2800/23818 loss 0.0365
+06:37:35 epoch 4 step 3000/23818 loss 0.0997
+06:37:52 epoch 4 step 3200/23818 loss 0.0665
+06:38:09 epoch 4 step 3400/23818 loss 0.1272
+06:38:27 epoch 4 step 3600/23818 loss 0.0404
+06:38:44 epoch 4 step 3800/23818 loss 0.1320
+06:39:02 epoch 4 step 4000/23818 loss 0.0510
+06:39:20 epoch 4 step 4200/23818 loss 0.1130
+06:39:37 epoch 4 step 4400/23818 loss 0.1954
+06:40:12 epoch 4 step 4800/23818 loss 0.0103
+06:40:30 epoch 4 step 5000/23818 loss 0.0280
+06:40:47 epoch 4 step 5200/23818 loss 0.2444
+06:41:04 epoch 4 step 5400/23818 loss 0.0227
+06:41:22 epoch 4 step 5600/23818 loss 0.1976
+06:41:39 epoch 4 step 5800/23818 loss 0.0425
+06:41:57 epoch 4 step 6000/23818 loss 0.0240
+06:42:15 epoch 4 step 6200/23818 loss 0.0005
+06:42:32 epoch 4 step 6400/23818 loss 0.1396
+06:42:50 epoch 4 step 6600/23818 loss 0.1456
+06:43:07 epoch 4 step 6800/23818 loss 0.0123
+06:43:25 epoch 4 step 7000/23818 loss 0.2082
+06:43:43 epoch 4 step 7200/23818 loss 0.1932
+06:44:00 epoch 4 step 7400/23818 loss 0.1069
+06:44:35 epoch 4 step 7800/23818 loss 0.1388
+06:44:53 epoch 4 step 8000/23818 loss 0.0038
+06:45:10 epoch 4 step 8200/23818 loss 0.0020
+06:45:28 epoch 4 step 8400/23818 loss 0.2713
+06:45:45 epoch 4 step 8600/23818 loss 0.0439
+06:46:20 epoch 4 step 9000/23818 loss 0.0607
+06:46:38 epoch 4 step 9200/23818 loss 0.1321
+06:46:54 epoch 4 step 9400/23818 loss 0.1219
+06:47:12 epoch 4 step 9600/23818 loss 0.1442
+06:47:30 epoch 4 step 9800/23818 loss 0.0998
+06:47:47 epoch 4 step 10000/23818 loss 0.0622
+06:48:05 epoch 4 step 10200/23818 loss 0.0429
+06:48:22 epoch 4 step 10400/23818 loss 0.0239
+06:48:40 epoch 4 step 10600/23818 loss 0.1466
+06:48:58 epoch 4 step 10800/23818 loss 0.0565
+06:49:15 epoch 4 step 11000/23818 loss 0.0538
+06:49:33 epoch 4 step 11200/23818 loss 0.1642
+06:49:51 epoch 4 step 11400/23818 loss 0.3148
+06:50:08 epoch 4 step 11600/23818 loss 0.0354
+06:50:26 epoch 4 step 11800/23818 loss 0.0138
+06:50:43 epoch 4 step 12000/23818 loss 0.1337
+06:51:18 epoch 4 step 12400/23818 loss 0.1675
+06:51:36 epoch 4 step 12600/23818 loss 0.2140
+06:51:53 epoch 4 step 12800/23818 loss 0.0146
+06:52:11 epoch 4 step 13000/23818 loss 0.1924
+06:52:28 epoch 4 step 13200/23818 loss 0.0002
+06:52:46 epoch 4 step 13400/23818 loss 0.1399
+06:53:04 epoch 4 step 13600/23818 loss 0.0308
+06:53:21 epoch 4 step 13800/23818 loss 0.0605
+06:53:39 epoch 4 step 14000/23818 loss 0.1176
+06:53:56 epoch 4 step 14200/23818 loss 0.0145
+06:54:13 epoch 4 step 14400/23818 loss 0.0381
+06:54:31 epoch 4 step 14600/23818 loss 0.0873
+06:54:48 epoch 4 step 14800/23818 loss 0.0008
+06:55:06 epoch 4 step 15000/23818 loss 0.1518
+06:55:23 epoch 4 step 15200/23818 loss 0.2646
+06:55:41 epoch 4 step 15400/23818 loss 0.2693
+06:55:59 epoch 4 step 15600/23818 loss 0.0561
+06:56:16 epoch 4 step 15800/23818 loss 0.1399
+06:56:34 epoch 4 step 16000/23818 loss 0.1049
+06:56:51 epoch 4 step 16200/23818 loss 0.0588
+06:57:43 epoch 4 step 16800/23818 loss 0.1152
+06:58:01 epoch 4 step 17000/23818 loss 0.0010
+06:58:19 epoch 4 step 17200/23818 loss 0.2248
+06:58:36 epoch 4 step 17400/23818 loss 0.0201
+06:58:54 epoch 4 step 17600/23818 loss 0.0964
+06:59:12 epoch 4 step 17800/23818 loss 0.3586
+06:59:29 epoch 4 step 18000/23818 loss 0.0170
+06:59:47 epoch 4 step 18200/23818 loss 0.1282
+07:00:04 epoch 4 step 18400/23818 loss 0.0152
+07:00:21 epoch 4 step 18600/23818 loss 0.1876
+07:00:39 epoch 4 step 18800/23818 loss 0.0839
+07:00:57 epoch 4 step 19000/23818 loss 0.0771
+07:01:14 epoch 4 step 19200/23818 loss 0.0856
+07:01:32 epoch 4 step 19400/23818 loss 0.1583
+07:02:06 epoch 4 step 19800/23818 loss 0.1609
+07:02:23 epoch 4 step 20000/23818 loss 0.1832
+07:02:41 epoch 4 step 20200/23818 loss 0.1227
+07:02:58 epoch 4 step 20400/23818 loss 0.1485
+07:03:32 epoch 4 step 20800/23818 loss 0.1110
+07:03:50 epoch 4 step 21000/23818 loss 0.0803
+07:04:25 epoch 4 step 21400/23818 loss 0.1847
+07:04:43 epoch 4 step 21600/23818 loss 0.1946
+07:05:00 epoch 4 step 21800/23818 loss 0.0056
+07:05:17 epoch 4 step 22000/23818 loss 0.1353
+07:05:34 epoch 4 step 22200/23818 loss 0.2507
+07:05:52 epoch 4 step 22400/23818 loss 0.2220
+07:06:09 epoch 4 step 22600/23818 loss 0.0894
+07:06:44 epoch 4 step 23000/23818 loss 0.1680
+07:07:01 epoch 4 step 23200/23818 loss 0.0769
+07:07:36 epoch 4 step 23600/23818 loss 0.0819
+07:07:54 epoch 4 step 23800/23818 loss 0.1744
+07:10:06 epoch 4 dev accuracy 0.7988
+07:10:07 epoch 4 checkpointed to C:\Users\extra\Desktop\DSC266\FP\outputs\models\ranker_large_clean.partial.pt
+07:10:28 epoch 5 step 200/23818 loss 0.0971
+07:11:04 epoch 5 step 600/23818 loss 0.0334
+07:11:21 epoch 5 step 800/23818 loss 0.0071
+07:11:38 epoch 5 step 1000/23818 loss 0.1630
+07:11:56 epoch 5 step 1200/23818 loss 0.0051
+07:12:14 epoch 5 step 1400/23818 loss 0.0082
+07:12:31 epoch 5 step 1600/23818 loss 0.0490
+07:12:48 epoch 5 step 1800/23818 loss 0.0794
+07:13:06 epoch 5 step 2000/23818 loss 0.1253
+07:13:23 epoch 5 step 2200/23818 loss 0.0371
+07:13:40 epoch 5 step 2400/23818 loss 0.0385
+07:13:57 epoch 5 step 2600/23818 loss 0.1335
+07:14:14 epoch 5 step 2800/23818 loss 0.0925
+07:14:32 epoch 5 step 3000/23818 loss 0.0403
+07:14:49 epoch 5 step 3200/23818 loss 0.0845
+07:15:07 epoch 5 step 3400/23818 loss 0.0803
+07:15:24 epoch 5 step 3600/23818 loss 0.1031
+07:15:42 epoch 5 step 3800/23818 loss 0.0006
+07:15:58 epoch 5 step 4000/23818 loss 0.0114
+07:16:16 epoch 5 step 4200/23818 loss 0.0286
+07:16:50 epoch 5 step 4600/23818 loss 0.0502
+07:17:08 epoch 5 step 4800/23818 loss 0.0402
+07:17:25 epoch 5 step 5000/23818 loss 0.0010
+07:17:43 epoch 5 step 5200/23818 loss 0.0325
+07:18:18 epoch 5 step 5600/23818 loss 0.0439
+07:18:36 epoch 5 step 5800/23818 loss 0.0000
+07:18:54 epoch 5 step 6000/23818 loss 0.0778
+07:19:12 epoch 5 step 6200/23818 loss 0.0178
+07:19:29 epoch 5 step 6400/23818 loss 0.0837
+07:19:47 epoch 5 step 6600/23818 loss 0.0097
+07:20:05 epoch 5 step 6800/23818 loss 0.0561
+07:20:22 epoch 5 step 7000/23818 loss 0.0109
+07:20:39 epoch 5 step 7200/23818 loss 0.0008
+07:20:57 epoch 5 step 7400/23818 loss 0.0592
+07:21:14 epoch 5 step 7600/23818 loss 0.0662
+07:21:32 epoch 5 step 7800/23818 loss 0.1956
+07:21:50 epoch 5 step 8000/23818 loss 0.0138
+07:22:07 epoch 5 step 8200/23818 loss 0.0075
+07:22:25 epoch 5 step 8400/23818 loss 0.1064
+07:22:42 epoch 5 step 8600/23818 loss 0.0091
+07:23:00 epoch 5 step 8800/23818 loss 0.0647
+07:23:35 epoch 5 step 9200/23818 loss 0.1109
+07:23:52 epoch 5 step 9400/23818 loss 0.1195
+07:24:10 epoch 5 step 9600/23818 loss 0.0004
+07:24:45 epoch 5 step 10000/23818 loss 0.0864
+07:25:02 epoch 5 step 10200/23818 loss 0.0237
+07:25:20 epoch 5 step 10400/23818 loss 0.0685
+07:25:37 epoch 5 step 10600/23818 loss 0.0931
+07:25:55 epoch 5 step 10800/23818 loss 0.0460
+07:26:12 epoch 5 step 11000/23818 loss 0.0002
+07:26:29 epoch 5 step 11200/23818 loss 0.0641
+07:26:47 epoch 5 step 11400/23818 loss 0.0001
+07:27:21 epoch 5 step 11800/23818 loss 0.1145
+07:27:56 epoch 5 step 12200/23818 loss 0.0017
+07:28:13 epoch 5 step 12400/23818 loss 0.0360
+07:28:31 epoch 5 step 12600/23818 loss 0.0424
+07:29:06 epoch 5 step 13000/23818 loss 0.0997
+07:29:23 epoch 5 step 13200/23818 loss 0.0021
+07:29:41 epoch 5 step 13400/23818 loss 0.0718
+07:29:58 epoch 5 step 13600/23818 loss 0.0536
+07:30:33 epoch 5 step 14000/23818 loss 0.0623
+07:30:51 epoch 5 step 14200/23818 loss 0.2425
+07:31:08 epoch 5 step 14400/23818 loss 0.0462
+07:31:25 epoch 5 step 14600/23818 loss 0.0371
+07:31:42 epoch 5 step 14800/23818 loss 0.0116
+07:32:00 epoch 5 step 15000/23818 loss 0.0066
+07:32:17 epoch 5 step 15200/23818 loss 0.0007
+07:32:34 epoch 5 step 15400/23818 loss 0.0000
+07:32:51 epoch 5 step 15600/23818 loss 0.0000
+07:33:09 epoch 5 step 15800/23818 loss 0.0001
+07:33:26 epoch 5 step 16000/23818 loss 0.2741
+07:34:19 epoch 5 step 16600/23818 loss 0.0257
+07:34:36 epoch 5 step 16800/23818 loss 0.0231
+07:34:54 epoch 5 step 17000/23818 loss 0.0875
+07:35:29 epoch 5 step 17400/23818 loss 0.0788
+07:35:46 epoch 5 step 17600/23818 loss 0.2131
+07:36:38 epoch 5 step 18200/23818 loss 0.1688
+07:36:55 epoch 5 step 18400/23818 loss 0.0014
+07:37:13 epoch 5 step 18600/23818 loss 0.0002
+07:37:30 epoch 5 step 18800/23818 loss 0.1702
+07:37:48 epoch 5 step 19000/23818 loss 0.0635
+07:38:05 epoch 5 step 19200/23818 loss 0.0767
+07:38:40 epoch 5 step 19600/23818 loss 0.0294
+07:38:58 epoch 5 step 19800/23818 loss 0.0003
+07:39:15 epoch 5 step 20000/23818 loss 0.0156
+07:39:32 epoch 5 step 20200/23818 loss 0.0213
+07:39:50 epoch 5 step 20400/23818 loss 0.1237
+07:40:07 epoch 5 step 20600/23818 loss 0.0503
+07:40:25 epoch 5 step 20800/23818 loss 0.2460
+07:40:42 epoch 5 step 21000/23818 loss 0.1760
+07:41:00 epoch 5 step 21200/23818 loss 0.0156
+07:41:17 epoch 5 step 21400/23818 loss 0.0087
+07:41:34 epoch 5 step 21600/23818 loss 0.0693
+07:41:52 epoch 5 step 21800/23818 loss 0.0010
+07:42:09 epoch 5 step 22000/23818 loss 0.0001
+07:42:27 epoch 5 step 22200/23818 loss 0.1116
+07:43:01 epoch 5 step 22600/23818 loss 0.0634
+07:43:18 epoch 5 step 22800/23818 loss 0.1330
+07:43:36 epoch 5 step 23000/23818 loss 0.0553
+07:43:54 epoch 5 step 23200/23818 loss 0.0020
+07:44:11 epoch 5 step 23400/23818 loss 0.0012
+07:44:29 epoch 5 step 23600/23818 loss 0.0229
+07:44:46 epoch 5 step 23800/23818 loss 0.0001
+07:46:57 epoch 5 dev accuracy 0.8075
+07:46:58 epoch 5 checkpointed to C:\Users\extra\Desktop\DSC266\FP\outputs\models\ranker_large_clean.partial.pt
+07:47:18 epoch 6 step 200/23818 loss 0.1272
+07:47:36 epoch 6 step 400/23818 loss 0.0002
+07:47:54 epoch 6 step 600/23818 loss 0.0101
+07:48:11 epoch 6 step 800/23818 loss 0.1227
+07:48:46 epoch 6 step 1200/23818 loss 0.0072
+07:49:03 epoch 6 step 1400/23818 loss 0.0001
+07:49:20 epoch 6 step 1600/23818 loss 0.0847
+07:49:38 epoch 6 step 1800/23818 loss 0.0657
+07:49:55 epoch 6 step 2000/23818 loss 0.0086
+07:50:30 epoch 6 step 2400/23818 loss 0.0211
+07:50:48 epoch 6 step 2600/23818 loss 0.0059
+07:51:05 epoch 6 step 2800/23818 loss 0.0099
+07:51:23 epoch 6 step 3000/23818 loss 0.0000
+07:51:40 epoch 6 step 3200/23818 loss 0.0663
+07:51:58 epoch 6 step 3400/23818 loss 0.0361
+07:52:33 epoch 6 step 3800/23818 loss 0.0074
+07:53:07 epoch 6 step 4200/23818 loss 0.0028
+07:53:24 epoch 6 step 4400/23818 loss 0.0319
+07:53:41 epoch 6 step 4600/23818 loss 0.0123
+07:53:58 epoch 6 step 4800/23818 loss 0.0094
+07:54:16 epoch 6 step 5000/23818 loss 0.0580
+07:54:33 epoch 6 step 5200/23818 loss 0.0000
+07:54:51 epoch 6 step 5400/23818 loss 0.0001
+07:55:08 epoch 6 step 5600/23818 loss 0.0036
+07:55:25 epoch 6 step 5800/23818 loss 0.0001
+07:55:43 epoch 6 step 6000/23818 loss 0.0002
+07:56:01 epoch 6 step 6200/23818 loss 0.0031
+07:56:18 epoch 6 step 6400/23818 loss 0.2861
+07:56:36 epoch 6 step 6600/23818 loss 0.0000
+07:56:53 epoch 6 step 6800/23818 loss 0.0001
+07:57:10 epoch 6 step 7000/23818 loss 0.0038
+07:57:45 epoch 6 step 7400/23818 loss 0.0055
+07:58:03 epoch 6 step 7600/23818 loss 0.0136
+07:58:20 epoch 6 step 7800/23818 loss 0.2274
+07:58:37 epoch 6 step 8000/23818 loss 0.0353
+07:58:55 epoch 6 step 8200/23818 loss 0.0007
+07:59:12 epoch 6 step 8400/23818 loss 0.0040
+07:59:29 epoch 6 step 8600/23818 loss 0.0000
+07:59:46 epoch 6 step 8800/23818 loss 0.0308
+08:00:20 epoch 6 step 9200/23818 loss 0.0452
+08:00:38 epoch 6 step 9400/23818 loss 0.0188
+08:00:56 epoch 6 step 9600/23818 loss 0.0008
+08:01:30 epoch 6 step 10000/23818 loss 0.0426
+08:01:48 epoch 6 step 10200/23818 loss 0.1127
+08:02:05 epoch 6 step 10400/23818 loss 0.1149
+08:02:23 epoch 6 step 10600/23818 loss 0.0795
+08:02:40 epoch 6 step 10800/23818 loss 0.0674
+08:02:57 epoch 6 step 11000/23818 loss 0.0004
+08:03:15 epoch 6 step 11200/23818 loss 0.0675
+08:03:32 epoch 6 step 11400/23818 loss 0.0989
+08:03:49 epoch 6 step 11600/23818 loss 0.0006
+08:04:07 epoch 6 step 11800/23818 loss 0.0000
+08:04:24 epoch 6 step 12000/23818 loss 0.0309
+08:04:42 epoch 6 step 12200/23818 loss 0.0000
+08:05:00 epoch 6 step 12400/23818 loss 0.0287
+08:05:17 epoch 6 step 12600/23818 loss 0.0943
+08:05:35 epoch 6 step 12800/23818 loss 0.0002
+08:05:53 epoch 6 step 13000/23818 loss 0.0002
+08:06:10 epoch 6 step 13200/23818 loss 0.0749
+08:06:46 epoch 6 step 13600/23818 loss 0.0781
+08:07:03 epoch 6 step 13800/23818 loss 0.0207
+08:07:38 epoch 6 step 14200/23818 loss 0.0905
+08:07:55 epoch 6 step 14400/23818 loss 0.0353
+08:08:13 epoch 6 step 14600/23818 loss 0.0534
+08:08:30 epoch 6 step 14800/23818 loss 0.0440
+08:08:48 epoch 6 step 15000/23818 loss 0.0190
+08:09:05 epoch 6 step 15200/23818 loss 0.0646
+08:09:22 epoch 6 step 15400/23818 loss 0.0008
+08:09:39 epoch 6 step 15600/23818 loss 0.0000
+08:10:14 epoch 6 step 16000/23818 loss 0.0039
+08:10:31 epoch 6 step 16200/23818 loss 0.0268
+08:10:49 epoch 6 step 16400/23818 loss 0.0007
+08:11:24 epoch 6 step 16800/23818 loss 0.0279
+08:11:42 epoch 6 step 17000/23818 loss 0.0217
+08:11:59 epoch 6 step 17200/23818 loss 0.0001
+08:12:17 epoch 6 step 17400/23818 loss 0.0000
+08:12:34 epoch 6 step 17600/23818 loss 0.0131
+08:12:52 epoch 6 step 17800/23818 loss 0.0417
+08:13:09 epoch 6 step 18000/23818 loss 0.0027
+08:13:27 epoch 6 step 18200/23818 loss 0.0000
+08:13:44 epoch 6 step 18400/23818 loss 0.0066
+08:14:02 epoch 6 step 18600/23818 loss 0.0000
+08:14:20 epoch 6 step 18800/23818 loss 0.0381
+08:14:37 epoch 6 step 19000/23818 loss 0.0002
+08:14:54 epoch 6 step 19200/23818 loss 0.1570
+08:15:12 epoch 6 step 19400/23818 loss 0.0022
+08:15:29 epoch 6 step 19600/23818 loss 0.0003
+08:15:47 epoch 6 step 19800/23818 loss 0.0028
+08:16:05 epoch 6 step 20000/23818 loss 0.0161
+08:16:22 epoch 6 step 20200/23818 loss 0.0000
+08:16:39 epoch 6 step 20400/23818 loss 0.0003
+08:16:56 epoch 6 step 20600/23818 loss 0.0045
+08:17:13 epoch 6 step 20800/23818 loss 0.0650
+08:17:31 epoch 6 step 21000/23818 loss 0.0008
+08:17:49 epoch 6 step 21200/23818 loss 0.0006
+08:18:06 epoch 6 step 21400/23818 loss 0.0683
+08:18:23 epoch 6 step 21600/23818 loss 0.2286
+08:18:41 epoch 6 step 21800/23818 loss 0.0628
+08:18:59 epoch 6 step 22000/23818 loss 0.0392
+08:19:16 epoch 6 step 22200/23818 loss 0.0011
+08:19:33 epoch 6 step 22400/23818 loss 0.0402
+08:19:51 epoch 6 step 22600/23818 loss 0.0396
+08:20:08 epoch 6 step 22800/23818 loss 0.0000
+08:20:26 epoch 6 step 23000/23818 loss 0.0879
+08:20:44 epoch 6 step 23200/23818 loss 0.0290
+08:21:01 epoch 6 step 23400/23818 loss 0.0002
+08:21:19 epoch 6 step 23600/23818 loss 0.0565
+08:21:36 epoch 6 step 23800/23818 loss 0.0004
+08:23:47 epoch 6 dev accuracy 0.8063
+08:24:08 epoch 7 step 200/23818 loss 0.0000
+08:24:25 epoch 7 step 400/23818 loss 0.0016
+08:24:42 epoch 7 step 600/23818 loss 0.0083
+08:24:59 epoch 7 step 800/23818 loss 0.0000
+08:25:16 epoch 7 step 1000/23818 loss 0.0000
+08:25:34 epoch 7 step 1200/23818 loss 0.0191
+08:25:51 epoch 7 step 1400/23818 loss 0.0464
+08:26:08 epoch 7 step 1600/23818 loss 0.0051
+08:26:26 epoch 7 step 1800/23818 loss 0.0490
+08:26:44 epoch 7 step 2000/23818 loss 0.1270
+08:27:01 epoch 7 step 2200/23818 loss 0.0022
+08:27:19 epoch 7 step 2400/23818 loss 0.0001
+08:27:36 epoch 7 step 2600/23818 loss 0.0000
+08:27:54 epoch 7 step 2800/23818 loss 0.0001
+08:28:11 epoch 7 step 3000/23818 loss 0.0026
+08:28:47 epoch 7 step 3400/23818 loss 0.0179
+08:29:04 epoch 7 step 3600/23818 loss 0.0000
+08:29:21 epoch 7 step 3800/23818 loss 0.0000
+08:29:38 epoch 7 step 4000/23818 loss 0.0000
+08:29:56 epoch 7 step 4200/23818 loss 0.0000
+08:30:14 epoch 7 step 4400/23818 loss 0.0000
+08:30:31 epoch 7 step 4600/23818 loss 0.1067
+08:30:49 epoch 7 step 4800/23818 loss 0.0000
+08:31:07 epoch 7 step 5000/23818 loss 0.0371
+08:31:24 epoch 7 step 5200/23818 loss 0.0432
+08:31:41 epoch 7 step 5400/23818 loss 0.0796
+08:31:59 epoch 7 step 5600/23818 loss 0.0218
+08:32:16 epoch 7 step 5800/23818 loss 0.0004
+08:32:33 epoch 7 step 6000/23818 loss 0.0273
+08:32:51 epoch 7 step 6200/23818 loss 0.0002
+08:33:08 epoch 7 step 6400/23818 loss 0.0000
+08:33:26 epoch 7 step 6600/23818 loss 0.0002
+08:33:43 epoch 7 step 6800/23818 loss 0.0000
+08:34:01 epoch 7 step 7000/23818 loss 0.0000
+08:34:18 epoch 7 step 7200/23818 loss 0.0002
+08:34:36 epoch 7 step 7400/23818 loss 0.2148
+08:34:53 epoch 7 step 7600/23818 loss 0.0873
+08:35:11 epoch 7 step 7800/23818 loss 0.0004
+08:35:28 epoch 7 step 8000/23818 loss 0.0175
+08:35:45 epoch 7 step 8200/23818 loss 0.0001
+08:36:03 epoch 7 step 8400/23818 loss 0.0040
+08:36:20 epoch 7 step 8600/23818 loss 0.0002
+08:36:38 epoch 7 step 8800/23818 loss 0.0008
+08:36:55 epoch 7 step 9000/23818 loss 0.0012
+08:37:12 epoch 7 step 9200/23818 loss 0.0000
+08:37:30 epoch 7 step 9400/23818 loss 0.1132
+08:37:47 epoch 7 step 9600/23818 loss 0.0000
+08:38:05 epoch 7 step 9800/23818 loss 0.0005
+08:38:22 epoch 7 step 10000/23818 loss 0.0000
+08:38:39 epoch 7 step 10200/23818 loss 0.0000
+08:38:57 epoch 7 step 10400/23818 loss 0.0003
+08:39:15 epoch 7 step 10600/23818 loss 0.0101
+08:39:49 epoch 7 step 11000/23818 loss 0.0210
+08:40:07 epoch 7 step 11200/23818 loss 0.0397
+08:40:25 epoch 7 step 11400/23818 loss 0.0139
+08:40:42 epoch 7 step 11600/23818 loss 0.0000
+08:40:59 epoch 7 step 11800/23818 loss 0.0000
+08:41:17 epoch 7 step 12000/23818 loss 0.0749
+08:41:34 epoch 7 step 12200/23818 loss 0.0811
+08:41:51 epoch 7 step 12400/23818 loss 0.0011
+08:42:09 epoch 7 step 12600/23818 loss 0.0022
+08:42:26 epoch 7 step 12800/23818 loss 0.0060
+08:42:44 epoch 7 step 13000/23818 loss 0.0321
+08:43:00 epoch 7 step 13200/23818 loss 0.0292
+08:43:36 epoch 7 step 13600/23818 loss 0.0423
+08:43:53 epoch 7 step 13800/23818 loss 0.1144
+08:44:11 epoch 7 step 14000/23818 loss 0.0059
+08:44:29 epoch 7 step 14200/23818 loss 0.0514
+08:44:47 epoch 7 step 14400/23818 loss 0.0001
+08:45:05 epoch 7 step 14600/23818 loss 0.0213
+08:45:21 epoch 7 step 14800/23818 loss 0.0001
+08:45:39 epoch 7 step 15000/23818 loss 0.0562
+08:45:56 epoch 7 step 15200/23818 loss 0.0030
+08:46:14 epoch 7 step 15400/23818 loss 0.0008
+08:46:48 epoch 7 step 15800/23818 loss 0.0012
+08:47:05 epoch 7 step 16000/23818 loss 0.0000
+08:47:22 epoch 7 step 16200/23818 loss 0.0798
+08:47:39 epoch 7 step 16400/23818 loss 0.0009
+08:47:58 epoch 7 step 16600/23818 loss 0.0000
+08:48:15 epoch 7 step 16800/23818 loss 0.0001
+08:48:33 epoch 7 step 17000/23818 loss 0.0027
+08:48:51 epoch 7 step 17200/23818 loss 0.0414
+08:49:08 epoch 7 step 17400/23818 loss 0.0000
+08:49:26 epoch 7 step 17600/23818 loss 0.0000
+08:49:54 epoch 7 step 17800/23818 loss 0.0075
+08:50:21 epoch 7 step 18000/23818 loss 0.0427
+08:50:47 epoch 7 step 18200/23818 loss 0.0000
+08:51:16 epoch 7 step 18400/23818 loss 0.0415
+08:51:43 epoch 7 step 18600/23818 loss 0.1249
+08:52:10 epoch 7 step 18800/23818 loss 0.0002
+08:52:39 epoch 7 step 19000/23818 loss 0.0004
+08:53:33 epoch 7 step 19400/23818 loss 0.0001
+08:54:05 epoch 7 step 19600/23818 loss 0.0000
+08:54:36 epoch 7 step 19800/23818 loss 0.0000
+08:55:09 epoch 7 step 20000/23818 loss 0.0185
+08:55:42 epoch 7 step 20200/23818 loss 0.0001
+08:56:17 epoch 7 step 20400/23818 loss 0.0000
+08:56:47 epoch 7 step 20600/23818 loss 0.0562
+08:57:22 epoch 7 step 20800/23818 loss 0.1920
+08:57:53 epoch 7 step 21000/23818 loss 0.0002
+08:58:24 epoch 7 step 21200/23818 loss 0.0510
+08:59:24 epoch 7 step 21600/23818 loss 0.0000
+08:59:55 epoch 7 step 21800/23818 loss 0.0031
+09:00:26 epoch 7 step 22000/23818 loss 0.0022
+09:00:57 epoch 7 step 22200/23818 loss 0.0000
+09:01:31 epoch 7 step 22400/23818 loss 0.0000
+09:02:02 epoch 7 step 22600/23818 loss 0.0002
+09:02:34 epoch 7 step 22800/23818 loss 0.0000
+09:03:05 epoch 7 step 23000/23818 loss 0.0037
+09:03:36 epoch 7 step 23200/23818 loss 0.0000
+09:04:08 epoch 7 step 23400/23818 loss 0.0649
+09:04:42 epoch 7 step 23600/23818 loss 0.0084
+09:07:31 epoch 7 dev accuracy 0.8021
+09:08:08 epoch 8 step 200/23818 loss 0.0000
+09:08:39 epoch 8 step 400/23818 loss 0.0093
+09:09:10 epoch 8 step 600/23818 loss 0.0067
+09:09:41 epoch 8 step 800/23818 loss 0.0026
+09:10:15 epoch 8 step 1000/23818 loss 0.0000
+09:10:47 epoch 8 step 1200/23818 loss 0.0000
+09:11:17 epoch 8 step 1400/23818 loss 0.0000
+09:11:50 epoch 8 step 1600/23818 loss 0.0053
+09:12:23 epoch 8 step 1800/23818 loss 0.0000
+09:12:55 epoch 8 step 2000/23818 loss 0.0037
+09:13:28 epoch 8 step 2200/23818 loss 0.0056
+09:13:58 epoch 8 step 2400/23818 loss 0.0167
+09:14:29 epoch 8 step 2600/23818 loss 0.0023
+09:14:59 epoch 8 step 2800/23818 loss 0.0000
+09:15:29 epoch 8 step 3000/23818 loss 0.0000
+09:16:00 epoch 8 step 3200/23818 loss 0.0000
+09:16:32 epoch 8 step 3400/23818 loss 0.0000
+09:17:03 epoch 8 step 3600/23818 loss 0.0000
+09:17:30 epoch 8 step 3800/23818 loss 0.0000
+09:17:59 epoch 8 step 4000/23818 loss 0.0000
+09:18:29 epoch 8 step 4200/23818 loss 0.0000
+09:18:58 epoch 8 step 4400/23818 loss 0.0000
+09:19:28 epoch 8 step 4600/23818 loss 0.0000
+09:19:57 epoch 8 step 4800/23818 loss 0.0001
+09:20:24 epoch 8 step 5000/23818 loss 0.0005
+09:20:52 epoch 8 step 5200/23818 loss 0.0008
+
+======================================================================
+2026-08-26 23:37:50  ranker.py --encoder answerdotai/ModernBERT-large --epochs 8 --batch-size 1 --grad-accum 8 --lr 2e-5 --memory-fraction 0.92 --tag _large_clean
+======================================================================
+W0826 23:38:18.580000 13232 torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+23:38:19 HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+23:38:20 HTTP Request: HEAD https://huggingface.co/answerdotai/ModernBERT-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+23:38:20 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/answerdotai/ModernBERT-large/45bb4654a4d5aaff24dd11d4781fa46d39bf8c13/config.json "HTTP/1.1 200 OK"
+23:38:20 HTTP Request: HEAD https://huggingface.co/answerdotai/ModernBERT-large/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+23:38:20 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/answerdotai/ModernBERT-large/45bb4654a4d5aaff24dd11d4781fa46d39bf8c13/tokenizer_config.json "HTTP/1.1 200 OK"
+23:38:20 HTTP Request: HEAD https://huggingface.co/answerdotai/ModernBERT-large/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+23:38:20 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+23:38:20 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/answerdotai/ModernBERT-large/45bb4654a4d5aaff24dd11d4781fa46d39bf8c13/tokenizer_config.json "HTTP/1.1 200 OK"
+23:38:20 HTTP Request: GET https://huggingface.co/api/models/answerdotai/ModernBERT-large/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+23:38:20 HTTP Request: GET https://huggingface.co/api/models/answerdotai/ModernBERT-large/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+23:38:20 HTTP Request: HEAD https://huggingface.co/answerdotai/ModernBERT-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+23:38:20 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/answerdotai/ModernBERT-large/45bb4654a4d5aaff24dd11d4781fa46d39bf8c13/config.json "HTTP/1.1 200 OK"
+23:38:21 HTTP Request: HEAD https://huggingface.co/answerdotai/ModernBERT-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+23:38:21 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/answerdotai/ModernBERT-large/45bb4654a4d5aaff24dd11d4781fa46d39bf8c13/config.json "HTTP/1.1 200 OK"
+device : cuda:0 — NVIDIA GeForce RTX 5070 [sm_120] capped at 11.8 GB of 11.6 GB free
+encoder: answerdotai/ModernBERT-large
+context: -2500/+800 chars, 1152 tokens
+train  : 15 novels, 23,818 quotes
+dev    : 6 novels, 4,842 quotes
+
+batch  : 1 x 8 accum = 8 effective, lr 2e-05
+features: on
+resume : ranker_large_clean.resume.pt present — continuing that run
+
+Loading weights:   0%|          | 0/170 [00:00<?, ?it/s]Loading weights: 100%|##########| 170/170 [00:00<00:00, 4475.92it/s]
+[transformers] [1mModernBertModel LOAD REPORT[0m from: answerdotai/ModernBERT-large
+Key               | Status     |  | 
+------------------+------------+--+-
+head.dense.weight | UNEXPECTED |  | 
+decoder.bias      | UNEXPECTED |  | 
+head.norm.weight  | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+23:38:59 train: 23818 quotes encoded, gold in candidates for 91.4%, 0.3% of candidates out of window
+23:39:07 dev: 4842 quotes encoded, gold in candidates for 86.1%, 0.4% of candidates out of window
+23:39:10 resumed from ranker_large_clean.resume.pt at epoch 8 (best dev 0.8075 so far)
+23:39:35 epoch 8 step 200/23818 loss 0.0000
+
+======================================================================
+2026-08-29 23:44:17  ranker.py --encoder answerdotai/ModernBERT-large --epochs 8 --batch-size 1 --grad-accum 8 --lr 2e-5 --memory-fraction 0.92 --tag _large_clean
+======================================================================
+W0829 23:44:37.873000 15908 torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+23:44:39 HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+23:44:39 HTTP Request: HEAD https://huggingface.co/answerdotai/ModernBERT-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+23:44:39 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+23:44:39 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/answerdotai/ModernBERT-large/45bb4654a4d5aaff24dd11d4781fa46d39bf8c13/config.json "HTTP/1.1 200 OK"
+23:44:39 HTTP Request: HEAD https://huggingface.co/answerdotai/ModernBERT-large/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+23:44:39 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/answerdotai/ModernBERT-large/45bb4654a4d5aaff24dd11d4781fa46d39bf8c13/tokenizer_config.json "HTTP/1.1 200 OK"
+23:44:39 HTTP Request: HEAD https://huggingface.co/answerdotai/ModernBERT-large/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+23:44:39 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/answerdotai/ModernBERT-large/45bb4654a4d5aaff24dd11d4781fa46d39bf8c13/tokenizer_config.json "HTTP/1.1 200 OK"
+23:44:39 HTTP Request: GET https://huggingface.co/api/models/answerdotai/ModernBERT-large/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+23:44:39 HTTP Request: GET https://huggingface.co/api/models/answerdotai/ModernBERT-large/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+23:44:39 HTTP Request: HEAD https://huggingface.co/answerdotai/ModernBERT-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+23:44:39 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/answerdotai/ModernBERT-large/45bb4654a4d5aaff24dd11d4781fa46d39bf8c13/config.json "HTTP/1.1 200 OK"
+23:44:39 HTTP Request: HEAD https://huggingface.co/answerdotai/ModernBERT-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+23:44:39 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/answerdotai/ModernBERT-large/45bb4654a4d5aaff24dd11d4781fa46d39bf8c13/config.json "HTTP/1.1 200 OK"
+device : cuda:0 — NVIDIA GeForce RTX 5070 [sm_120] capped at 11.8 GB of 11.6 GB free
+encoder: answerdotai/ModernBERT-large
+context: -2500/+800 chars, 1152 tokens
+train  : 15 novels, 23,818 quotes
+dev    : 6 novels, 4,842 quotes
+
+batch  : 1 x 8 accum = 8 effective, lr 2e-05
+features: on
+resume : ranker_large_clean.resume.pt present — continuing that run
+
+Loading weights:   0%|          | 0/170 [00:00<?, ?it/s]Loading weights: 100%|##########| 170/170 [00:00<00:00, 5231.46it/s]
+[transformers] [1mModernBertModel LOAD REPORT[0m from: answerdotai/ModernBERT-large
+Key               | Status     |  | 
+------------------+------------+--+-
+head.norm.weight  | UNEXPECTED |  | 
+decoder.bias      | UNEXPECTED |  | 
+head.dense.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+23:45:14 train: 23818 quotes encoded, gold in candidates for 91.4%, 0.3% of candidates out of window
+23:45:21 dev: 4842 quotes encoded, gold in candidates for 86.1%, 0.4% of candidates out of window
+23:45:23 resumed from ranker_large_clean.resume.pt at epoch 8 (best dev 0.8075 so far)
+23:45:40 epoch 8 step 200/23818 loss 0.0000
+23:45:56 epoch 8 step 400/23818 loss 0.0045
+23:46:12 epoch 8 step 600/23818 loss 0.0102
+23:46:29 epoch 8 step 800/23818 loss 0.0002
+23:46:46 epoch 8 step 1000/23818 loss 0.0000
+23:47:02 epoch 8 step 1200/23818 loss 0.0000
+23:47:18 epoch 8 step 1400/23818 loss 0.0000
+23:47:34 epoch 8 step 1600/23818 loss 0.0053
+23:47:50 epoch 8 step 1800/23818 loss 0.0000
+23:48:06 epoch 8 step 2000/23818 loss 0.0036
+23:48:22 epoch 8 step 2200/23818 loss 0.0085
+23:48:38 epoch 8 step 2400/23818 loss 0.0187
+23:48:53 epoch 8 step 2600/23818 loss 0.0000
+23:49:09 epoch 8 step 2800/23818 loss 0.0000
+23:49:25 epoch 8 step 3000/23818 loss 0.0000
+23:49:41 epoch 8 step 3200/23818 loss 0.0000
+23:49:57 epoch 8 step 3400/23818 loss 0.0000
+23:50:13 epoch 8 step 3600/23818 loss 0.0000
+23:50:29 epoch 8 step 3800/23818 loss 0.0000
+23:50:45 epoch 8 step 4000/23818 loss 0.0000
+23:51:01 epoch 8 step 4200/23818 loss 0.0000
+23:51:17 epoch 8 step 4400/23818 loss 0.0000
+23:51:33 epoch 8 step 4600/23818 loss 0.0000
+23:51:50 epoch 8 step 4800/23818 loss 0.0000
+23:52:06 epoch 8 step 5000/23818 loss 0.0000
+23:52:22 epoch 8 step 5200/23818 loss 0.0003
+23:52:38 epoch 8 step 5400/23818 loss 0.0000
+23:52:54 epoch 8 step 5600/23818 loss 0.0001
+23:53:10 epoch 8 step 5800/23818 loss 0.0083
+23:53:27 epoch 8 step 6000/23818 loss 0.0000
+23:53:43 epoch 8 step 6200/23818 loss 0.0000
+23:53:59 epoch 8 step 6400/23818 loss 0.0000
+23:54:15 epoch 8 step 6600/23818 loss 0.0223
+23:54:31 epoch 8 step 6800/23818 loss 0.0017
+23:54:48 epoch 8 step 7000/23818 loss 0.0088
+23:55:04 epoch 8 step 7200/23818 loss 0.0000
+23:55:20 epoch 8 step 7400/23818 loss 0.0000
+23:55:36 epoch 8 step 7600/23818 loss 0.0000
+23:55:52 epoch 8 step 7800/23818 loss 0.0000
+23:56:08 epoch 8 step 8000/23818 loss 0.0000
+23:56:24 epoch 8 step 8200/23818 loss 0.0000
+23:56:40 epoch 8 step 8400/23818 loss 0.0000
+23:56:56 epoch 8 step 8600/23818 loss 0.0000
+23:57:12 epoch 8 step 8800/23818 loss 0.0000
+23:57:29 epoch 8 step 9000/23818 loss 0.0000
+23:58:01 epoch 8 step 9400/23818 loss 0.0000
+23:58:17 epoch 8 step 9600/23818 loss 0.0000
+23:58:34 epoch 8 step 9800/23818 loss 0.0348
+23:59:07 epoch 8 step 10200/23818 loss 0.0000
+23:59:23 epoch 8 step 10400/23818 loss 0.0000
+23:59:55 epoch 8 step 10800/23818 loss 0.0001
+00:00:12 epoch 8 step 11000/23818 loss 0.0000
+00:00:28 epoch 8 step 11200/23818 loss 0.0000
+00:00:45 epoch 8 step 11400/23818 loss 0.0000
+00:01:01 epoch 8 step 11600/23818 loss 0.0004
+00:01:17 epoch 8 step 11800/23818 loss 0.0000
+00:01:34 epoch 8 step 12000/23818 loss 0.0000
+00:01:50 epoch 8 step 12200/23818 loss 0.0000
+00:02:07 epoch 8 step 12400/23818 loss 0.0332
+00:02:22 epoch 8 step 12600/23818 loss 0.0000
+00:02:54 epoch 8 step 13000/23818 loss 0.0006
+00:03:11 epoch 8 step 13200/23818 loss 0.0000
+00:03:27 epoch 8 step 13400/23818 loss 0.0000
+00:03:43 epoch 8 step 13600/23818 loss 0.0066
+00:03:59 epoch 8 step 13800/23818 loss 0.0000
+00:04:16 epoch 8 step 14000/23818 loss 0.0000
+00:04:32 epoch 8 step 14200/23818 loss 0.0001
+00:04:48 epoch 8 step 14400/23818 loss 0.0000
+00:05:20 epoch 8 step 14800/23818 loss 0.0000
+00:05:36 epoch 8 step 15000/23818 loss 0.0078
+00:05:52 epoch 8 step 15200/23818 loss 0.0000
+00:06:08 epoch 8 step 15400/23818 loss 0.0000
+00:06:24 epoch 8 step 15600/23818 loss 0.0438
+00:06:40 epoch 8 step 15800/23818 loss 0.0047
+00:06:55 epoch 8 step 16000/23818 loss 0.0000
+00:07:12 epoch 8 step 16200/23818 loss 0.0221
+00:07:28 epoch 8 step 16400/23818 loss 0.0000
+00:07:44 epoch 8 step 16600/23818 loss 0.0000
+00:08:00 epoch 8 step 16800/23818 loss 0.0000
+00:08:16 epoch 8 step 17000/23818 loss 0.0001
+00:08:32 epoch 8 step 17200/23818 loss 0.0000
+00:08:48 epoch 8 step 17400/23818 loss 0.0000
+00:09:05 epoch 8 step 17600/23818 loss 0.0000
+00:09:21 epoch 8 step 17800/23818 loss 0.0004
+00:09:36 epoch 8 step 18000/23818 loss 0.0000
+00:09:53 epoch 8 step 18200/23818 loss 0.0000
+00:10:09 epoch 8 step 18400/23818 loss 0.0000
+00:10:25 epoch 8 step 18600/23818 loss 0.0000
+00:10:41 epoch 8 step 18800/23818 loss 0.0000
+00:10:57 epoch 8 step 19000/23818 loss 0.0000
+00:11:13 epoch 8 step 19200/23818 loss 0.0000
+00:11:29 epoch 8 step 19400/23818 loss 0.0001
+00:11:45 epoch 8 step 19600/23818 loss 0.0000
+00:12:01 epoch 8 step 19800/23818 loss 0.0000
+00:12:18 epoch 8 step 20000/23818 loss 0.0000
+00:12:34 epoch 8 step 20200/23818 loss 0.0002
+00:12:50 epoch 8 step 20400/23818 loss 0.0000
+00:13:05 epoch 8 step 20600/23818 loss 0.0000
+00:13:22 epoch 8 step 20800/23818 loss 0.0000
+00:13:38 epoch 8 step 21000/23818 loss 0.0000
+00:13:54 epoch 8 step 21200/23818 loss 0.0002
+00:14:10 epoch 8 step 21400/23818 loss 0.0000
+00:14:25 epoch 8 step 21600/23818 loss 0.0000
+00:14:42 epoch 8 step 21800/23818 loss 0.0042
+00:14:58 epoch 8 step 22000/23818 loss 0.0000
+00:15:14 epoch 8 step 22200/23818 loss 0.0000
+00:15:29 epoch 8 step 22400/23818 loss 0.0000
+00:15:46 epoch 8 step 22600/23818 loss 0.0000
+00:16:02 epoch 8 step 22800/23818 loss 0.0000
+00:16:17 epoch 8 step 23000/23818 loss 0.0003
+00:16:33 epoch 8 step 23200/23818 loss 0.0000
+00:16:49 epoch 8 step 23400/23818 loss 0.0000
+00:17:05 epoch 8 step 23600/23818 loss 0.0000
+00:17:21 epoch 8 step 23800/23818 loss 0.0000
+00:19:23 epoch 8 dev accuracy 0.8083
+00:19:24 epoch 8 checkpointed to C:\Users\extra\Desktop\DSC266\FP\outputs\models\ranker_large_clean.partial.pt
+00:21:34 wrote C:\Users\extra\Desktop\DSC266\FP\outputs\results\ranker_large_clean_dev.json
+
+ranker_large_clean
+  all         80.8%  [70.1, 90.8]  n=4,842
+  explicit    94.9%  [91.4, 98.0]  n=1,722
+  anaphoric   76.2%  [66.4, 86.0]  n=1,750
+  implicit    69.1%  [52.7, 83.5]  n=1,370
+  ceiling     86.1%  (gold in candidate set)
+
+saved C:\Users\extra\Desktop\DSC266\FP\outputs\models\ranker_large_clean.pt (best dev accuracy 0.8083)

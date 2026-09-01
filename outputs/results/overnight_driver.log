@@ -1,0 +1,27 @@
+overnight run started 2026-08-14 19:21:26
+working directory: C:\Users\extra\Desktop\DSC266\FP\src
+
+======================================================================
+[19:21:26] START  Model 1: ModernBERT ranker, 8 epochs
+          log: C:\Users\extra\Desktop\DSC266\FP\outputs\results\train_ranker_mb.log
+[21:20:50] DONE  Model 1: ModernBERT ranker, 8 epochs (119 min, exit 0)
+
+======================================================================
+[21:20:50] START  Model 1 vs baselines on dev (Week 2 deliverable)
+          log: C:\Users\extra\Desktop\DSC266\FP\outputs\results\compare_dev_mb.log
+[21:21:51] DONE  Model 1 vs baselines on dev (Week 2 deliverable) (1 min, exit 0)
+
+======================================================================
+[21:21:51] START  Model 2: Qwen3-8B zero-shot on dev
+          log: C:\Users\extra\Desktop\DSC266\FP\outputs\results\generator_zeroshot_dev.log
+[22:05:14] DONE  Model 2: Qwen3-8B zero-shot on dev (43 min, exit 0)
+
+======================================================================
+[22:05:14] START  Model 2: Qwen3-8B LoRA (8k quotes) + dev
+          log: C:\Users\extra\Desktop\DSC266\FP\outputs\results\generator_lora_dev.log
+[00:28:11] FAILED Model 2: Qwen3-8B LoRA (8k quotes) + dev (143 min, exit 3221225477)
+          see C:\Users\extra\Desktop\DSC266\FP\outputs\results\generator_lora_dev.log for the traceback
+
+======================================================================
+[00:28:11] START  Combined table: baselines + ranker + both decoders
+          log: C:\Users\extra\Desktop\DSC266\FP\outputs\results\compare_dev_all.log

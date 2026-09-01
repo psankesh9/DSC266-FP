@@ -1,0 +1,22 @@
+# Model checkpoints: 6.5 GB across 9 rankers plus the Qwen3-8B LoRA adapter.
+outputs/models/
+
+# PDNC and derived corpora: 119 MB, and PDNC is public. See README.
+data/
+
+# Per-quotation prediction dumps: 45 MB. The summary JSONs and logs that the
+# paper's numbers come from are small and are tracked.
+outputs/results/*_dev.json
+outputs/results/*_test.json
+!outputs/results/comparison_*.json
+!outputs/results/extrinsic_*.json
+!outputs/results/figure_data_dev.json
+
+# Working files
+__pycache__/
+*.pyc
+.bak/
+
+# Local editor settings and the emailable bundle (rebuildable)
+.claude/
+*.zip

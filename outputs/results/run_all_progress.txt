@@ -1,0 +1,19 @@
+run_all progress - updated 2026-08-30 00:21:37
+
+  done                 Ablation: ModernBERT with context clamped to 512
+  done                 Ablation: RoBERTa at the pre-swap window
+  done                 Ablation: hand features zeroed
+  done                 Model 2: Qwen3-8B LoRA (8k quotes) + dev
+  done                 Ablation: Qwen3-1.7B zero-shot on dev
+  done          1 min  Dev table: baselines + ranker + ablations + every decoder
+  done          2 min  TEST: baselines + ModernBERT ranker
+  done         84 min  TEST: Qwen3-8B zero-shot
+  done        107 min  TEST: Qwen3-8B LoRA
+  done          2 min  TEST table: every system
+  done                 Extrinsic audiobook metric on dev
+  done          0 min  Extrinsic audiobook metric on test
+  done          0 min  Rebuild report figures
+  done        318 min  Ablation: ModernBERT-large (capacity)
+  done         37 min  PRIORITY-LATER: ModernBERT-large, effective batch matched to base
+
+  15/15 steps complete

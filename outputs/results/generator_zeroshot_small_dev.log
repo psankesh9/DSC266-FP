@@ -1,0 +1,70 @@
+
+======================================================================
+2026-08-25 16:33:11  generator.py dev --zero-shot --model Qwen/Qwen3-1.7B --tag -1.7b
+======================================================================
+16:33:29 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-1.7B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+16:33:29 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+16:33:29 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-1.7B/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e/config.json "HTTP/1.1 200 OK"
+16:33:29 HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-1.7B/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e/config.json "HTTP/1.1 200 OK"
+C:\Users\extra\AppData\Roaming\Python\Python314\site-packages\huggingface_hub\file_download.py:139: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\extra\.cache\huggingface\hub\models--Qwen--Qwen3-1.7B. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+16:33:29 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-1.7B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+16:33:29 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-1.7B/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e/tokenizer_config.json "HTTP/1.1 200 OK"
+16:33:29 HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-1.7B/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e/tokenizer_config.json "HTTP/1.1 200 OK"
+16:33:29 HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3-1.7B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+16:33:30 HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3-1.7B/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+16:33:30 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-1.7B/resolve/main/vocab.json "HTTP/1.1 307 Temporary Redirect"
+16:33:30 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-1.7B/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e/vocab.json "HTTP/1.1 200 OK"
+16:33:30 HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-1.7B/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e/vocab.json "HTTP/1.1 200 OK"
+16:33:30 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-1.7B/resolve/main/merges.txt "HTTP/1.1 307 Temporary Redirect"
+16:33:30 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-1.7B/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e/merges.txt "HTTP/1.1 200 OK"
+16:33:30 HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-1.7B/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e/merges.txt "HTTP/1.1 200 OK"
+16:33:30 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-1.7B/resolve/main/tokenizer.json "HTTP/1.1 302 Found"
+16:33:32 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-1.7B/resolve/main/added_tokens.json "HTTP/1.1 404 Not Found"
+16:33:32 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-1.7B/resolve/main/special_tokens_map.json "HTTP/1.1 404 Not Found"
+16:33:32 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-1.7B/resolve/main/chat_template.jinja "HTTP/1.1 404 Not Found"
+16:33:32 HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3-1.7B "HTTP/1.1 200 OK"
+16:33:32 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-1.7B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+16:33:32 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-1.7B/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e/config.json "HTTP/1.1 200 OK"
+16:33:32 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-1.7B/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+16:33:32 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-1.7B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+16:33:33 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-1.7B/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e/config.json "HTTP/1.1 200 OK"
+W0825 16:33:33.186000 16600 torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+16:33:33 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-1.7B/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+16:33:34 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-1.7B/resolve/main/model.safetensors.index.json "HTTP/1.1 307 Temporary Redirect"
+16:33:34 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-1.7B/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e/model.safetensors.index.json "HTTP/1.1 200 OK"
+16:33:34 HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-1.7B/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e/model.safetensors.index.json "HTTP/1.1 200 OK"
+16:33:34 HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3-1.7B/revision/main "HTTP/1.1 200 OK"
+16:33:34 HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3-1.7B/tree/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e?recursive=true&expand=false "HTTP/1.1 200 OK"
+device : cuda:0 - NVIDIA GeForce RTX 5070 [sm_120] capped at 11.8 GB of 11.6 GB free
+model  : Qwen/Qwen3-1.7B  [4-bit NF4]
+context: -2500/+800 chars
+dev    : 6 novels, 4,842 quotes
+
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:  50%|█████     | 1/2 [00:30<00:30, 30.98s/it]Fetching 2 files: 100%|██████████| 2/2 [00:30<00:00, 15.49s/it]
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<00:46,  6.70it/s]Loading weights:   1%|          | 2/311 [00:00<00:45,  6.73it/s]Loading weights:   9%|▉         | 28/311 [00:00<00:02, 96.96it/s]Loading weights:  23%|██▎       | 71/311 [00:00<00:01, 206.47it/s]Loading weights:  37%|███▋      | 114/311 [00:00<00:00, 275.59it/s]Loading weights:  49%|████▉     | 153/311 [00:00<00:00, 310.70it/s]Loading weights:  62%|██████▏   | 192/311 [00:00<00:00, 333.66it/s]Loading weights:  76%|███████▌  | 235/311 [00:00<00:00, 358.98it/s]Loading weights:  88%|████████▊ | 274/311 [00:01<00:00, 368.25it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 282.43it/s]
+16:34:06 HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-1.7B/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+16:34:06 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-1.7B/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e/generation_config.json "HTTP/1.1 200 OK"
+16:34:06 HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-1.7B/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e/generation_config.json "HTTP/1.1 200 OK"
+16:34:08 dev: 4842 prompts built, gold in candidates for 86.1%
+16:36:21 scored 500/4842
+16:38:18 scored 1000/4842
+16:40:11 scored 1500/4842
+16:41:53 scored 2000/4842
+16:43:52 scored 2500/4842
+16:45:42 scored 3000/4842
+16:47:28 scored 3500/4842
+16:49:07 scored 4000/4842
+16:50:46 scored 4500/4842
+16:51:58 wrote C:\Users\extra\Desktop\DSC266\FP\outputs\results\generator-zeroshot-1.7b_dev.json
+
+generator-zeroshot-1.7b
+  all         35.2%  [31.4, 40.1]  n=4,842
+  explicit    38.9%  [30.1, 49.0]  n=1,722
+  anaphoric   34.1%  [29.4, 39.5]  n=1,750
+  implicit    31.8%  [28.0, 39.2]  n=1,370
+  ceiling     86.1%  (gold in candidate set)
+
+  scoring rule: length-normalised 35.3% vs unnormalised 43.7% (of 4,826 quotes with candidates)

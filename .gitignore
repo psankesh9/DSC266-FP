@@ -16,7 +16,3 @@ outputs/results/*_test.json
 __pycache__/
 *.pyc
 .bak/
-
-# Local editor settings and the emailable bundle (rebuildable)
-.claude/
-*.zip
